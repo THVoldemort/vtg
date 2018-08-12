@@ -1,0 +1,26 @@
+
+{
+    "vtgApp": {
+        "hotel" : {
+            "home": {
+                "title": "Hotels",
+                "createLabel": "Thêm mới một Hotel",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Hotel"
+            },
+            "created": "Một Hotel mới được tạo với định danh {{ param }}",
+            "updated": "Một Hotel cập nhật với định danh {{ param }}",
+            "deleted": "Một Hotel đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Hotel {{ id }}?"
+            },
+            "detail": {
+                "title": "Hotel"
+            },
+            "code": "Code",
+            "name": "Name",
+            "numOfRoom": "Num Of Room",
+            "latitde": "Latitde",
+            "longitude": "Longitude"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+
+entity Hotel {
+	code String,
+    name String,
+    numOfRoom Integer,
+    latitde Double,
+    longitude Double,
+}
+
+
+
+
+
+paginate Hotel with pagination
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl //except Employee, Job
+// Set an angular suffix
+angularSuffix * with mySuffix

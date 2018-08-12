@@ -3,7 +3,6 @@ package com.vol.vtg.service;
 import com.vol.vtg.VtgApp;
 import com.vol.vtg.config.Constants;
 import com.vol.vtg.domain.User;
-import com.vol.vtg.repository.search.UserSearchRepository;
 import com.vol.vtg.repository.UserRepository;
 import com.vol.vtg.service.dto.UserDTO;
 import com.vol.vtg.service.util.RandomUtil;
@@ -30,8 +29,6 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 /**
@@ -49,14 +46,6 @@ public class UserServiceIntTest {
 
     @Autowired
     private UserService userService;
-
-    /**
-     * This repository is mocked in the com.vol.vtg.repository.search test package.
-     *
-     * @see com.vol.vtg.repository.search.UserSearchRepositoryMockConfiguration
-     */
-    @Autowired
-    private UserSearchRepository mockUserSearchRepository;
 
     @Autowired
     private AuditingHandler auditingHandler;
@@ -168,9 +157,6 @@ public class UserServiceIntTest {
         userService.removeNotActivatedUsers();
         users = userRepository.findAllByActivatedIsFalseAndCreatedDateBefore(now.minus(3, ChronoUnit.DAYS));
         assertThat(users).isEmpty();
-
-        // Verify Elasticsearch mock
-        verify(mockUserSearchRepository, times(1)).delete(user);
     }
 
     @Test
@@ -199,9 +185,6 @@ public class UserServiceIntTest {
         assertThat(userRepository.findOneByLogin("johndoe")).isPresent();
         userService.removeNotActivatedUsers();
         assertThat(userRepository.findOneByLogin("johndoe")).isNotPresent();
-
-        // Verify Elasticsearch mock
-        verify(mockUserSearchRepository, times(1)).delete(user);
     }
 
 }
