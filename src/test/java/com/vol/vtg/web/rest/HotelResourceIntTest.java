@@ -33,6 +33,7 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import com.vol.vtg.domain.enumeration.HotelType;
 /**
  * Test class for the HotelResource REST controller.
  *
@@ -42,20 +43,56 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = VtgApp.class)
 public class HotelResourceIntTest {
 
-    private static final String DEFAULT_CODE = "AAAAAAAAAA";
-    private static final String UPDATED_CODE = "BBBBBBBBBB";
-
     private static final String DEFAULT_NAME = "AAAAAAAAAA";
     private static final String UPDATED_NAME = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_NUM_OF_ROOM = 1;
-    private static final Integer UPDATED_NUM_OF_ROOM = 2;
+    private static final Integer DEFAULT_STAR_RANK = 1;
+    private static final Integer UPDATED_STAR_RANK = 2;
 
-    private static final Double DEFAULT_LATITDE = 1D;
-    private static final Double UPDATED_LATITDE = 2D;
+    private static final String DEFAULT_SLOGAN = "AAAAAAAAAA";
+    private static final String UPDATED_SLOGAN = "BBBBBBBBBB";
+
+    private static final String DEFAULT_ADDRESS = "AAAAAAAAAA";
+    private static final String UPDATED_ADDRESS = "BBBBBBBBBB";
+
+    private static final Double DEFAULT_PRICE_FROM = 1D;
+    private static final Double UPDATED_PRICE_FROM = 2D;
+
+    private static final Double DEFAULT_PRICE_TO = 1D;
+    private static final Double UPDATED_PRICE_TO = 2D;
+
+    private static final Integer DEFAULT_RANK = 1;
+    private static final Integer UPDATED_RANK = 2;
+
+    private static final Double DEFAULT_LATITUDE = 1D;
+    private static final Double UPDATED_LATITUDE = 2D;
 
     private static final Double DEFAULT_LONGITUDE = 1D;
     private static final Double UPDATED_LONGITUDE = 2D;
+
+    private static final Integer DEFAULT_PROVINCE_ID = 1;
+    private static final Integer UPDATED_PROVINCE_ID = 2;
+
+    private static final HotelType DEFAULT_HOTEL_TYPE = HotelType.KHACH_SAN;
+    private static final HotelType UPDATED_HOTEL_TYPE = HotelType.NHA_NGHI;
+
+    private static final String DEFAULT_FILE_PATH_1 = "AAAAAAAAAA";
+    private static final String UPDATED_FILE_PATH_1 = "BBBBBBBBBB";
+
+    private static final String DEFAULT_FILE_PATH_2 = "AAAAAAAAAA";
+    private static final String UPDATED_FILE_PATH_2 = "BBBBBBBBBB";
+
+    private static final String DEFAULT_FILE_PATH_3 = "AAAAAAAAAA";
+    private static final String UPDATED_FILE_PATH_3 = "BBBBBBBBBB";
+
+    private static final String DEFAULT_FILE_PATH_4 = "AAAAAAAAAA";
+    private static final String UPDATED_FILE_PATH_4 = "BBBBBBBBBB";
+
+    private static final String DEFAULT_FILE_PATH_5 = "AAAAAAAAAA";
+    private static final String UPDATED_FILE_PATH_5 = "BBBBBBBBBB";
+
+    private static final Integer DEFAULT_PLACE_ID = 1;
+    private static final Integer UPDATED_PLACE_ID = 2;
 
     @Autowired
     private HotelRepository hotelRepository;
@@ -103,11 +140,23 @@ public class HotelResourceIntTest {
      */
     public static Hotel createEntity(EntityManager em) {
         Hotel hotel = new Hotel()
-            .code(DEFAULT_CODE)
             .name(DEFAULT_NAME)
-            .numOfRoom(DEFAULT_NUM_OF_ROOM)
-            .latitde(DEFAULT_LATITDE)
-            .longitude(DEFAULT_LONGITUDE);
+            .starRank(DEFAULT_STAR_RANK)
+            .slogan(DEFAULT_SLOGAN)
+            .address(DEFAULT_ADDRESS)
+            .priceFrom(DEFAULT_PRICE_FROM)
+            .priceTo(DEFAULT_PRICE_TO)
+            .rank(DEFAULT_RANK)
+            .latitude(DEFAULT_LATITUDE)
+            .longitude(DEFAULT_LONGITUDE)
+            .provinceId(DEFAULT_PROVINCE_ID)
+            .hotelType(DEFAULT_HOTEL_TYPE)
+            .filePath1(DEFAULT_FILE_PATH_1)
+            .filePath2(DEFAULT_FILE_PATH_2)
+            .filePath3(DEFAULT_FILE_PATH_3)
+            .filePath4(DEFAULT_FILE_PATH_4)
+            .filePath5(DEFAULT_FILE_PATH_5)
+            .placeId(DEFAULT_PLACE_ID);
         return hotel;
     }
 
@@ -132,11 +181,23 @@ public class HotelResourceIntTest {
         List<Hotel> hotelList = hotelRepository.findAll();
         assertThat(hotelList).hasSize(databaseSizeBeforeCreate + 1);
         Hotel testHotel = hotelList.get(hotelList.size() - 1);
-        assertThat(testHotel.getCode()).isEqualTo(DEFAULT_CODE);
         assertThat(testHotel.getName()).isEqualTo(DEFAULT_NAME);
-        assertThat(testHotel.getNumOfRoom()).isEqualTo(DEFAULT_NUM_OF_ROOM);
-        assertThat(testHotel.getLatitde()).isEqualTo(DEFAULT_LATITDE);
+        assertThat(testHotel.getStarRank()).isEqualTo(DEFAULT_STAR_RANK);
+        assertThat(testHotel.getSlogan()).isEqualTo(DEFAULT_SLOGAN);
+        assertThat(testHotel.getAddress()).isEqualTo(DEFAULT_ADDRESS);
+        assertThat(testHotel.getPriceFrom()).isEqualTo(DEFAULT_PRICE_FROM);
+        assertThat(testHotel.getPriceTo()).isEqualTo(DEFAULT_PRICE_TO);
+        assertThat(testHotel.getRank()).isEqualTo(DEFAULT_RANK);
+        assertThat(testHotel.getLatitude()).isEqualTo(DEFAULT_LATITUDE);
         assertThat(testHotel.getLongitude()).isEqualTo(DEFAULT_LONGITUDE);
+        assertThat(testHotel.getProvinceId()).isEqualTo(DEFAULT_PROVINCE_ID);
+        assertThat(testHotel.getHotelType()).isEqualTo(DEFAULT_HOTEL_TYPE);
+        assertThat(testHotel.getFilePath1()).isEqualTo(DEFAULT_FILE_PATH_1);
+        assertThat(testHotel.getFilePath2()).isEqualTo(DEFAULT_FILE_PATH_2);
+        assertThat(testHotel.getFilePath3()).isEqualTo(DEFAULT_FILE_PATH_3);
+        assertThat(testHotel.getFilePath4()).isEqualTo(DEFAULT_FILE_PATH_4);
+        assertThat(testHotel.getFilePath5()).isEqualTo(DEFAULT_FILE_PATH_5);
+        assertThat(testHotel.getPlaceId()).isEqualTo(DEFAULT_PLACE_ID);
     }
 
     @Test
@@ -170,11 +231,23 @@ public class HotelResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(hotel.getId().intValue())))
-            .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE.toString())))
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
-            .andExpect(jsonPath("$.[*].numOfRoom").value(hasItem(DEFAULT_NUM_OF_ROOM)))
-            .andExpect(jsonPath("$.[*].latitde").value(hasItem(DEFAULT_LATITDE.doubleValue())))
-            .andExpect(jsonPath("$.[*].longitude").value(hasItem(DEFAULT_LONGITUDE.doubleValue())));
+            .andExpect(jsonPath("$.[*].starRank").value(hasItem(DEFAULT_STAR_RANK)))
+            .andExpect(jsonPath("$.[*].slogan").value(hasItem(DEFAULT_SLOGAN.toString())))
+            .andExpect(jsonPath("$.[*].address").value(hasItem(DEFAULT_ADDRESS.toString())))
+            .andExpect(jsonPath("$.[*].priceFrom").value(hasItem(DEFAULT_PRICE_FROM.doubleValue())))
+            .andExpect(jsonPath("$.[*].priceTo").value(hasItem(DEFAULT_PRICE_TO.doubleValue())))
+            .andExpect(jsonPath("$.[*].rank").value(hasItem(DEFAULT_RANK)))
+            .andExpect(jsonPath("$.[*].latitude").value(hasItem(DEFAULT_LATITUDE.doubleValue())))
+            .andExpect(jsonPath("$.[*].longitude").value(hasItem(DEFAULT_LONGITUDE.doubleValue())))
+            .andExpect(jsonPath("$.[*].provinceId").value(hasItem(DEFAULT_PROVINCE_ID)))
+            .andExpect(jsonPath("$.[*].hotelType").value(hasItem(DEFAULT_HOTEL_TYPE.toString())))
+            .andExpect(jsonPath("$.[*].filePath1").value(hasItem(DEFAULT_FILE_PATH_1.toString())))
+            .andExpect(jsonPath("$.[*].filePath2").value(hasItem(DEFAULT_FILE_PATH_2.toString())))
+            .andExpect(jsonPath("$.[*].filePath3").value(hasItem(DEFAULT_FILE_PATH_3.toString())))
+            .andExpect(jsonPath("$.[*].filePath4").value(hasItem(DEFAULT_FILE_PATH_4.toString())))
+            .andExpect(jsonPath("$.[*].filePath5").value(hasItem(DEFAULT_FILE_PATH_5.toString())))
+            .andExpect(jsonPath("$.[*].placeId").value(hasItem(DEFAULT_PLACE_ID)));
     }
     
 
@@ -189,11 +262,23 @@ public class HotelResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(hotel.getId().intValue()))
-            .andExpect(jsonPath("$.code").value(DEFAULT_CODE.toString()))
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
-            .andExpect(jsonPath("$.numOfRoom").value(DEFAULT_NUM_OF_ROOM))
-            .andExpect(jsonPath("$.latitde").value(DEFAULT_LATITDE.doubleValue()))
-            .andExpect(jsonPath("$.longitude").value(DEFAULT_LONGITUDE.doubleValue()));
+            .andExpect(jsonPath("$.starRank").value(DEFAULT_STAR_RANK))
+            .andExpect(jsonPath("$.slogan").value(DEFAULT_SLOGAN.toString()))
+            .andExpect(jsonPath("$.address").value(DEFAULT_ADDRESS.toString()))
+            .andExpect(jsonPath("$.priceFrom").value(DEFAULT_PRICE_FROM.doubleValue()))
+            .andExpect(jsonPath("$.priceTo").value(DEFAULT_PRICE_TO.doubleValue()))
+            .andExpect(jsonPath("$.rank").value(DEFAULT_RANK))
+            .andExpect(jsonPath("$.latitude").value(DEFAULT_LATITUDE.doubleValue()))
+            .andExpect(jsonPath("$.longitude").value(DEFAULT_LONGITUDE.doubleValue()))
+            .andExpect(jsonPath("$.provinceId").value(DEFAULT_PROVINCE_ID))
+            .andExpect(jsonPath("$.hotelType").value(DEFAULT_HOTEL_TYPE.toString()))
+            .andExpect(jsonPath("$.filePath1").value(DEFAULT_FILE_PATH_1.toString()))
+            .andExpect(jsonPath("$.filePath2").value(DEFAULT_FILE_PATH_2.toString()))
+            .andExpect(jsonPath("$.filePath3").value(DEFAULT_FILE_PATH_3.toString()))
+            .andExpect(jsonPath("$.filePath4").value(DEFAULT_FILE_PATH_4.toString()))
+            .andExpect(jsonPath("$.filePath5").value(DEFAULT_FILE_PATH_5.toString()))
+            .andExpect(jsonPath("$.placeId").value(DEFAULT_PLACE_ID));
     }
     @Test
     @Transactional
@@ -216,11 +301,23 @@ public class HotelResourceIntTest {
         // Disconnect from session so that the updates on updatedHotel are not directly saved in db
         em.detach(updatedHotel);
         updatedHotel
-            .code(UPDATED_CODE)
             .name(UPDATED_NAME)
-            .numOfRoom(UPDATED_NUM_OF_ROOM)
-            .latitde(UPDATED_LATITDE)
-            .longitude(UPDATED_LONGITUDE);
+            .starRank(UPDATED_STAR_RANK)
+            .slogan(UPDATED_SLOGAN)
+            .address(UPDATED_ADDRESS)
+            .priceFrom(UPDATED_PRICE_FROM)
+            .priceTo(UPDATED_PRICE_TO)
+            .rank(UPDATED_RANK)
+            .latitude(UPDATED_LATITUDE)
+            .longitude(UPDATED_LONGITUDE)
+            .provinceId(UPDATED_PROVINCE_ID)
+            .hotelType(UPDATED_HOTEL_TYPE)
+            .filePath1(UPDATED_FILE_PATH_1)
+            .filePath2(UPDATED_FILE_PATH_2)
+            .filePath3(UPDATED_FILE_PATH_3)
+            .filePath4(UPDATED_FILE_PATH_4)
+            .filePath5(UPDATED_FILE_PATH_5)
+            .placeId(UPDATED_PLACE_ID);
         HotelDTO hotelDTO = hotelMapper.toDto(updatedHotel);
 
         restHotelMockMvc.perform(put("/api/hotels")
@@ -232,11 +329,23 @@ public class HotelResourceIntTest {
         List<Hotel> hotelList = hotelRepository.findAll();
         assertThat(hotelList).hasSize(databaseSizeBeforeUpdate);
         Hotel testHotel = hotelList.get(hotelList.size() - 1);
-        assertThat(testHotel.getCode()).isEqualTo(UPDATED_CODE);
         assertThat(testHotel.getName()).isEqualTo(UPDATED_NAME);
-        assertThat(testHotel.getNumOfRoom()).isEqualTo(UPDATED_NUM_OF_ROOM);
-        assertThat(testHotel.getLatitde()).isEqualTo(UPDATED_LATITDE);
+        assertThat(testHotel.getStarRank()).isEqualTo(UPDATED_STAR_RANK);
+        assertThat(testHotel.getSlogan()).isEqualTo(UPDATED_SLOGAN);
+        assertThat(testHotel.getAddress()).isEqualTo(UPDATED_ADDRESS);
+        assertThat(testHotel.getPriceFrom()).isEqualTo(UPDATED_PRICE_FROM);
+        assertThat(testHotel.getPriceTo()).isEqualTo(UPDATED_PRICE_TO);
+        assertThat(testHotel.getRank()).isEqualTo(UPDATED_RANK);
+        assertThat(testHotel.getLatitude()).isEqualTo(UPDATED_LATITUDE);
         assertThat(testHotel.getLongitude()).isEqualTo(UPDATED_LONGITUDE);
+        assertThat(testHotel.getProvinceId()).isEqualTo(UPDATED_PROVINCE_ID);
+        assertThat(testHotel.getHotelType()).isEqualTo(UPDATED_HOTEL_TYPE);
+        assertThat(testHotel.getFilePath1()).isEqualTo(UPDATED_FILE_PATH_1);
+        assertThat(testHotel.getFilePath2()).isEqualTo(UPDATED_FILE_PATH_2);
+        assertThat(testHotel.getFilePath3()).isEqualTo(UPDATED_FILE_PATH_3);
+        assertThat(testHotel.getFilePath4()).isEqualTo(UPDATED_FILE_PATH_4);
+        assertThat(testHotel.getFilePath5()).isEqualTo(UPDATED_FILE_PATH_5);
+        assertThat(testHotel.getPlaceId()).isEqualTo(UPDATED_PLACE_ID);
     }
 
     @Test

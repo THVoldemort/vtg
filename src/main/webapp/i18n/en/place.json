@@ -1,0 +1,37 @@
+
+{
+    "vtgApp": {
+        "place" : {
+            "home": {
+                "title": "Places",
+                "createLabel": "Create a new Place",
+                "createOrEditLabel": "Create or edit a Place"
+            },
+            "created": "A new Place is created with identifier {{ param }}",
+            "updated": "A Place is updated with identifier {{ param }}",
+            "deleted": "A Place is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Place {{ id }}?"
+            },
+            "detail": {
+                "title": "Place"
+            },
+            "name": "Name",
+            "slogan": "Slogan",
+            "address": "Address",
+            "rank": "Rank",
+            "commentId": "Comment Id",
+            "filePath1": "File Path 1",
+            "filePath2": "File Path 2",
+            "filePath3": "File Path 3",
+            "filePath4": "File Path 4",
+            "filePath5": "File Path 5",
+            "introduction": "Introduction",
+            "priceFrom": "Price From",
+            "priceTo": "Price To",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "provinceId": "Province Id"
+        }
+    }
+}

@@ -67,20 +67,56 @@ export class HotelMySuffix extends React.Component<IHotelMySuffixProps, IHotelMy
                 <th className="hand" onClick={this.sort('id')}>
                   <Translate contentKey="global.field.id">ID</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('code')}>
-                  <Translate contentKey="vtgApp.hotel.code">Code</Translate> <FontAwesomeIcon icon="sort" />
-                </th>
                 <th className="hand" onClick={this.sort('name')}>
                   <Translate contentKey="vtgApp.hotel.name">Name</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('numOfRoom')}>
-                  <Translate contentKey="vtgApp.hotel.numOfRoom">Num Of Room</Translate> <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={this.sort('starRank')}>
+                  <Translate contentKey="vtgApp.hotel.starRank">Star Rank</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('latitde')}>
-                  <Translate contentKey="vtgApp.hotel.latitde">Latitde</Translate> <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={this.sort('slogan')}>
+                  <Translate contentKey="vtgApp.hotel.slogan">Slogan</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('address')}>
+                  <Translate contentKey="vtgApp.hotel.address">Address</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('priceFrom')}>
+                  <Translate contentKey="vtgApp.hotel.priceFrom">Price From</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('priceTo')}>
+                  <Translate contentKey="vtgApp.hotel.priceTo">Price To</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('rank')}>
+                  <Translate contentKey="vtgApp.hotel.rank">Rank</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('latitude')}>
+                  <Translate contentKey="vtgApp.hotel.latitude">Latitude</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={this.sort('longitude')}>
                   <Translate contentKey="vtgApp.hotel.longitude">Longitude</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('provinceId')}>
+                  <Translate contentKey="vtgApp.hotel.provinceId">Province Id</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('hotelType')}>
+                  <Translate contentKey="vtgApp.hotel.hotelType">Hotel Type</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('filePath1')}>
+                  <Translate contentKey="vtgApp.hotel.filePath1">File Path 1</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('filePath2')}>
+                  <Translate contentKey="vtgApp.hotel.filePath2">File Path 2</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('filePath3')}>
+                  <Translate contentKey="vtgApp.hotel.filePath3">File Path 3</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('filePath4')}>
+                  <Translate contentKey="vtgApp.hotel.filePath4">File Path 4</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('filePath5')}>
+                  <Translate contentKey="vtgApp.hotel.filePath5">File Path 5</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('placeId')}>
+                  <Translate contentKey="vtgApp.hotel.placeId">Place Id</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -93,11 +129,25 @@ export class HotelMySuffix extends React.Component<IHotelMySuffixProps, IHotelMy
                       {hotel.id}
                     </Button>
                   </td>
-                  <td>{hotel.code}</td>
                   <td>{hotel.name}</td>
-                  <td>{hotel.numOfRoom}</td>
-                  <td>{hotel.latitde}</td>
+                  <td>{hotel.starRank}</td>
+                  <td>{hotel.slogan}</td>
+                  <td>{hotel.address}</td>
+                  <td>{hotel.priceFrom}</td>
+                  <td>{hotel.priceTo}</td>
+                  <td>{hotel.rank}</td>
+                  <td>{hotel.latitude}</td>
                   <td>{hotel.longitude}</td>
+                  <td>{hotel.provinceId}</td>
+                  <td>
+                    <Translate contentKey={`vtgApp.HotelType.${hotel.hotelType}`} />
+                  </td>
+                  <td>{hotel.filePath1}</td>
+                  <td>{hotel.filePath2}</td>
+                  <td>{hotel.filePath3}</td>
+                  <td>{hotel.filePath4}</td>
+                  <td>{hotel.filePath5}</td>
+                  <td>{hotel.placeId}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${hotel.id}`} color="info" size="sm">

@@ -1,0 +1,37 @@
+
+{
+    "vtgApp": {
+        "place" : {
+            "home": {
+                "title": "Places",
+                "createLabel": "Thêm mới một Place",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Place"
+            },
+            "created": "Một Place mới được tạo với định danh {{ param }}",
+            "updated": "Một Place cập nhật với định danh {{ param }}",
+            "deleted": "Một Place đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Place {{ id }}?"
+            },
+            "detail": {
+                "title": "Place"
+            },
+            "name": "Name",
+            "slogan": "Slogan",
+            "address": "Address",
+            "rank": "Rank",
+            "commentId": "Comment Id",
+            "filePath1": "File Path 1",
+            "filePath2": "File Path 2",
+            "filePath3": "File Path 3",
+            "filePath4": "File Path 4",
+            "filePath5": "File Path 5",
+            "introduction": "Introduction",
+            "priceFrom": "Price From",
+            "priceTo": "Price To",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "provinceId": "Province Id"
+        }
+    }
+}

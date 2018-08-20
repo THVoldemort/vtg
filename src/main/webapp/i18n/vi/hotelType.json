@@ -1,0 +1,13 @@
+{
+    "vtgApp": {
+        "HotelType" : {
+            "null": "",
+            "KHACH_SAN": "KHACH_SAN",
+            "NHA_NGHI": "NHA_NGHI",
+            "HOTEL": "HOTEL",
+            "HOMESTAY": "HOMESTAY",
+            "CAN_HO": "CAN_HO",
+            "RESOURCE": "RESOURCE"
+        }
+    }
+}

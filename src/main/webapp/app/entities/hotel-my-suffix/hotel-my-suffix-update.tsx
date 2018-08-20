@@ -85,34 +85,131 @@ export class HotelMySuffixUpdate extends React.Component<IHotelMySuffixUpdatePro
                   </AvGroup>
                 ) : null}
                 <AvGroup>
-                  <Label id="codeLabel" for="code">
-                    <Translate contentKey="vtgApp.hotel.code">Code</Translate>
-                  </Label>
-                  <AvField id="hotel-my-suffix-code" type="text" name="code" />
-                </AvGroup>
-                <AvGroup>
                   <Label id="nameLabel" for="name">
                     <Translate contentKey="vtgApp.hotel.name">Name</Translate>
                   </Label>
                   <AvField id="hotel-my-suffix-name" type="text" name="name" />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="numOfRoomLabel" for="numOfRoom">
-                    <Translate contentKey="vtgApp.hotel.numOfRoom">Num Of Room</Translate>
+                  <Label id="starRankLabel" for="starRank">
+                    <Translate contentKey="vtgApp.hotel.starRank">Star Rank</Translate>
                   </Label>
-                  <AvField id="hotel-my-suffix-numOfRoom" type="number" className="form-control" name="numOfRoom" />
+                  <AvField id="hotel-my-suffix-starRank" type="number" className="form-control" name="starRank" />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="latitdeLabel" for="latitde">
-                    <Translate contentKey="vtgApp.hotel.latitde">Latitde</Translate>
+                  <Label id="sloganLabel" for="slogan">
+                    <Translate contentKey="vtgApp.hotel.slogan">Slogan</Translate>
                   </Label>
-                  <AvField id="hotel-my-suffix-latitde" type="number" className="form-control" name="latitde" />
+                  <AvField id="hotel-my-suffix-slogan" type="text" name="slogan" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="addressLabel" for="address">
+                    <Translate contentKey="vtgApp.hotel.address">Address</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-address" type="text" name="address" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="priceFromLabel" for="priceFrom">
+                    <Translate contentKey="vtgApp.hotel.priceFrom">Price From</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-priceFrom" type="number" className="form-control" name="priceFrom" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="priceToLabel" for="priceTo">
+                    <Translate contentKey="vtgApp.hotel.priceTo">Price To</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-priceTo" type="number" className="form-control" name="priceTo" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="rankLabel" for="rank">
+                    <Translate contentKey="vtgApp.hotel.rank">Rank</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-rank" type="number" className="form-control" name="rank" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="latitudeLabel" for="latitude">
+                    <Translate contentKey="vtgApp.hotel.latitude">Latitude</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-latitude" type="number" className="form-control" name="latitude" />
                 </AvGroup>
                 <AvGroup>
                   <Label id="longitudeLabel" for="longitude">
                     <Translate contentKey="vtgApp.hotel.longitude">Longitude</Translate>
                   </Label>
                   <AvField id="hotel-my-suffix-longitude" type="number" className="form-control" name="longitude" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="provinceIdLabel" for="provinceId">
+                    <Translate contentKey="vtgApp.hotel.provinceId">Province Id</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-provinceId" type="number" className="form-control" name="provinceId" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="hotelTypeLabel">
+                    <Translate contentKey="vtgApp.hotel.hotelType">Hotel Type</Translate>
+                  </Label>
+                  <AvInput
+                    id="hotel-my-suffix-hotelType"
+                    type="select"
+                    className="form-control"
+                    name="hotelType"
+                    value={(!isNew && hotelEntity.hotelType) || 'KHACH_SAN'}
+                  >
+                    <option value="KHACH_SAN">
+                      <Translate contentKey="vtgApp.HotelType.KHACH_SAN" />
+                    </option>
+                    <option value="NHA_NGHI">
+                      <Translate contentKey="vtgApp.HotelType.NHA_NGHI" />
+                    </option>
+                    <option value="HOTEL">
+                      <Translate contentKey="vtgApp.HotelType.HOTEL" />
+                    </option>
+                    <option value="HOMESTAY">
+                      <Translate contentKey="vtgApp.HotelType.HOMESTAY" />
+                    </option>
+                    <option value="CAN_HO">
+                      <Translate contentKey="vtgApp.HotelType.CAN_HO" />
+                    </option>
+                    <option value="RESOURCE">
+                      <Translate contentKey="vtgApp.HotelType.RESOURCE" />
+                    </option>
+                  </AvInput>
+                </AvGroup>
+                <AvGroup>
+                  <Label id="filePath1Label" for="filePath1">
+                    <Translate contentKey="vtgApp.hotel.filePath1">File Path 1</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-filePath1" type="text" name="filePath1" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="filePath2Label" for="filePath2">
+                    <Translate contentKey="vtgApp.hotel.filePath2">File Path 2</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-filePath2" type="text" name="filePath2" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="filePath3Label" for="filePath3">
+                    <Translate contentKey="vtgApp.hotel.filePath3">File Path 3</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-filePath3" type="text" name="filePath3" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="filePath4Label" for="filePath4">
+                    <Translate contentKey="vtgApp.hotel.filePath4">File Path 4</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-filePath4" type="text" name="filePath4" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="filePath5Label" for="filePath5">
+                    <Translate contentKey="vtgApp.hotel.filePath5">File Path 5</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-filePath5" type="text" name="filePath5" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="placeIdLabel" for="placeId">
+                    <Translate contentKey="vtgApp.hotel.placeId">Place Id</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-placeId" type="number" className="form-control" name="placeId" />
                 </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/hotel-my-suffix" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />&nbsp;

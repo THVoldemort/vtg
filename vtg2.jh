@@ -1,0 +1,84 @@
+
+entity Province {
+	name String,
+    slogan String,
+    introduction String,
+    filePath1 String,
+    filePath2 String,
+    filePath3 String,
+    filePath4 String,
+    filePath5 String,
+    commentId Integer,
+}
+
+entity Place {
+	name String,
+    slogan String, 
+    address String,
+    rank Integer,
+ 	commentId Integer,
+    filePath1 String,
+    filePath2 String,
+    filePath3 String,
+    filePath4 String,
+    filePath5 String,
+    introduction String,
+    priceFrom Double,
+    priceTo Double,
+    latitude Double, 
+    longitude Double,
+    provinceId Integer
+}
+
+entity Hotel {
+	name String,
+    starRank Integer,
+    slogan String,
+    address String,
+    priceFrom Double,
+    priceTo Double,
+    rank Integer,
+    latitude Double,
+    longitude Double,
+    provinceId Integer,
+    hotelType HotelType,
+    filePath1 String,
+    filePath2 String,
+    filePath3 String,
+    filePath4 String,
+    filePath5 String,
+    placeId Integer
+}
+
+entity HotelRoom{
+	type Integer,
+    introduction String,
+    numOfAdult Integer,
+    numOfChild Integer,
+    priceEst Double,
+    priceAct Double,
+    quantity Integer,
+    filePath1 String,
+    filePath2 String,
+    filePath3 String,
+    filePath4 String,
+    filePath5 String,
+}
+
+
+enum HotelType {
+	KHACH_SAN,
+    NHA_NGHI,
+    HOTEL,
+    HOMESTAY,
+    CAN_HO,
+    RESOURCE
+}
+
+paginate Hotel with pagination
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl //except Employee, Job
+// Set an angular suffix
+angularSuffix * with mySuffix

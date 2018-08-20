@@ -2,24 +2,73 @@
     "name": "Hotel",
     "fields": [
         {
-            "fieldName": "code",
-            "fieldType": "String"
-        },
-        {
             "fieldName": "name",
             "fieldType": "String"
         },
         {
-            "fieldName": "numOfRoom",
+            "fieldName": "starRank",
             "fieldType": "Integer"
         },
         {
-            "fieldName": "latitde",
+            "fieldName": "slogan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "priceFrom",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "priceTo",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "rank",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "latitude",
             "fieldType": "Double"
         },
         {
             "fieldName": "longitude",
             "fieldType": "Double"
+        },
+        {
+            "fieldName": "provinceId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hotelType",
+            "fieldType": "HotelType",
+            "fieldValues": "KHACH_SAN,NHA_NGHI,HOTEL,HOMESTAY,CAN_HO,RESOURCE"
+        },
+        {
+            "fieldName": "filePath1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath4",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath5",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "placeId",
+            "fieldType": "Integer"
         }
     ],
     "relationships": [],

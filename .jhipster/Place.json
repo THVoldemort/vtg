@@ -1,0 +1,80 @@
+{
+    "name": "Place",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "slogan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rank",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "commentId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "filePath1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath4",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath5",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "introduction",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "priceFrom",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "priceTo",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "latitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "provinceId",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180815171430",
+    "entityTableName": "place",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}

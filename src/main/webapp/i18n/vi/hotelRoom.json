@@ -1,0 +1,33 @@
+
+{
+    "vtgApp": {
+        "hotelRoom" : {
+            "home": {
+                "title": "Hotel Rooms",
+                "createLabel": "Thêm mới một Hotel Room",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Hotel Room"
+            },
+            "created": "Một Hotel Room mới được tạo với định danh {{ param }}",
+            "updated": "Một Hotel Room cập nhật với định danh {{ param }}",
+            "deleted": "Một Hotel Room đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Hotel Room {{ id }}?"
+            },
+            "detail": {
+                "title": "Hotel Room"
+            },
+            "type": "Type",
+            "introduction": "Introduction",
+            "numOfAdult": "Num Of Adult",
+            "numOfChild": "Num Of Child",
+            "priceEst": "Price Est",
+            "priceAct": "Price Act",
+            "quantity": "Quantity",
+            "filePath1": "File Path 1",
+            "filePath2": "File Path 2",
+            "filePath3": "File Path 3",
+            "filePath4": "File Path 4",
+            "filePath5": "File Path 5"
+        }
+    }
+}

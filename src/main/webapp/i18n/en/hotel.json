@@ -16,11 +16,23 @@
             "detail": {
                 "title": "Hotel"
             },
-            "code": "Code",
             "name": "Name",
-            "numOfRoom": "Num Of Room",
-            "latitde": "Latitde",
-            "longitude": "Longitude"
+            "starRank": "Star Rank",
+            "slogan": "Slogan",
+            "address": "Address",
+            "priceFrom": "Price From",
+            "priceTo": "Price To",
+            "rank": "Rank",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "provinceId": "Province Id",
+            "hotelType": "Hotel Type",
+            "filePath1": "File Path 1",
+            "filePath2": "File Path 2",
+            "filePath3": "File Path 3",
+            "filePath4": "File Path 4",
+            "filePath5": "File Path 5",
+            "placeId": "Place Id"
         }
     }
 }

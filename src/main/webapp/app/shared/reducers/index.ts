@@ -16,6 +16,18 @@ import passwordReset, { PasswordResetState } from 'app/modules/account/password-
 import hotel, {
   HotelMySuffixState
 } from 'app/entities/hotel-my-suffix/hotel-my-suffix.reducer';
+// prettier-ignore
+import province, {
+  ProvinceMySuffixState
+} from 'app/entities/province-my-suffix/province-my-suffix.reducer';
+// prettier-ignore
+import place, {
+  PlaceMySuffixState
+} from 'app/entities/place-my-suffix/place-my-suffix.reducer';
+// prettier-ignore
+import hotelRoom, {
+  HotelRoomMySuffixState
+} from 'app/entities/hotel-room-my-suffix/hotel-room-my-suffix.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -30,6 +42,9 @@ export interface IRootState {
   readonly password: PasswordState;
   readonly settings: SettingsState;
   readonly hotel: HotelMySuffixState;
+  readonly province: ProvinceMySuffixState;
+  readonly place: PlaceMySuffixState;
+  readonly hotelRoom: HotelRoomMySuffixState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -46,6 +61,9 @@ const rootReducer = combineReducers<IRootState>({
   password,
   settings,
   hotel,
+  province,
+  place,
+  hotelRoom,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

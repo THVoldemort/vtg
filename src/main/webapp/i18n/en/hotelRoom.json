@@ -1,0 +1,33 @@
+
+{
+    "vtgApp": {
+        "hotelRoom" : {
+            "home": {
+                "title": "Hotel Rooms",
+                "createLabel": "Create a new Hotel Room",
+                "createOrEditLabel": "Create or edit a Hotel Room"
+            },
+            "created": "A new Hotel Room is created with identifier {{ param }}",
+            "updated": "A Hotel Room is updated with identifier {{ param }}",
+            "deleted": "A Hotel Room is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Hotel Room {{ id }}?"
+            },
+            "detail": {
+                "title": "Hotel Room"
+            },
+            "type": "Type",
+            "introduction": "Introduction",
+            "numOfAdult": "Num Of Adult",
+            "numOfChild": "Num Of Child",
+            "priceEst": "Price Est",
+            "priceAct": "Price Act",
+            "quantity": "Quantity",
+            "filePath1": "File Path 1",
+            "filePath2": "File Path 2",
+            "filePath3": "File Path 3",
+            "filePath4": "File Path 4",
+            "filePath5": "File Path 5"
+        }
+    }
+}

@@ -1,9 +1,10 @@
 package com.vol.vtg;
 
-import com.vol.vtg.config.ApplicationProperties;
-import com.vol.vtg.config.DefaultProfileUtil;
+import java.net.InetAddress;
+import java.util.Arrays;
+import java.util.Collection;
 
-import io.github.jhipster.config.JHipsterConstants;
+import javax.annotation.PostConstruct;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,11 +14,13 @@ import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.core.env.Environment;
 
-import javax.annotation.PostConstruct;
-import java.net.InetAddress;
-import java.util.Arrays;
-import java.util.Collection;
+import com.vol.vtg.config.ApplicationProperties;
+import com.vol.vtg.config.DefaultProfileUtil;
 
+import io.github.jhipster.config.JHipsterConstants;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+@EnableSwagger2
 @SpringBootApplication
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
 public class VtgApp {

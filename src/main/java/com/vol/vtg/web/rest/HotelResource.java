@@ -36,7 +36,7 @@ public class HotelResource {
     private final HotelService hotelService;
 
     public HotelResource(HotelService hotelService) {
-        this.hotelService = hotelService;
+        this.hotelService = hotelService; 
     }
 
     /**

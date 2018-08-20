@@ -1,0 +1,30 @@
+
+{
+    "vtgApp": {
+        "province" : {
+            "home": {
+                "title": "Provinces",
+                "createLabel": "Thêm mới một Province",
+                "createOrEditLabel": "Thêm mới hoặc cập nhật Province"
+            },
+            "created": "Một Province mới được tạo với định danh {{ param }}",
+            "updated": "Một Province cập nhật với định danh {{ param }}",
+            "deleted": "Một Province đã xóa với định danh {{ param }}",
+            "delete": {
+                "question": "Bạn có chắc là muốn xóa Province {{ id }}?"
+            },
+            "detail": {
+                "title": "Province"
+            },
+            "name": "Name",
+            "slogan": "Slogan",
+            "introduction": "Introduction",
+            "filePath1": "File Path 1",
+            "filePath2": "File Path 2",
+            "filePath3": "File Path 3",
+            "filePath4": "File Path 4",
+            "filePath5": "File Path 5",
+            "commentId": "Comment Id"
+        }
+    }
+}

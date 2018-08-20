@@ -1,0 +1,52 @@
+{
+    "name": "Province",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "slogan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "introduction",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath4",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "filePath5",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "commentId",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180815171429",
+    "entityTableName": "province",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}
