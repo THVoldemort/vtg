@@ -1,21 +1,30 @@
 package com.vol.vtg.web.rest;
 
-import com.codahale.metrics.annotation.Timed;
-import com.vol.vtg.service.ProvinceService;
-import com.vol.vtg.web.rest.errors.BadRequestAlertException;
-import com.vol.vtg.web.rest.util.HeaderUtil;
-import com.vol.vtg.service.dto.ProvinceDTO;
-import io.github.jhipster.web.util.ResponseUtil;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.net.URI;
-import java.net.URISyntaxException;
+import com.codahale.metrics.annotation.Timed;
+import com.vol.vtg.common.Result;
+import com.vol.vtg.service.ProvinceService;
+import com.vol.vtg.service.dto.ProvinceDTO;
+import com.vol.vtg.web.rest.errors.BadRequestAlertException;
+import com.vol.vtg.web.rest.util.HeaderUtil;
 
-import java.util.List;
-import java.util.Optional;
+import io.github.jhipster.web.util.ResponseUtil;
 
 /**
  * REST controller for managing Province.
@@ -43,15 +52,13 @@ public class ProvinceResource {
      */
     @PostMapping("/provinces")
     @Timed
-    public ResponseEntity<ProvinceDTO> createProvince(@RequestBody ProvinceDTO provinceDTO) throws URISyntaxException {
+    public Result<ProvinceDTO> createProvince(@RequestBody ProvinceDTO provinceDTO) throws URISyntaxException {
         log.debug("REST request to save Province : {}", provinceDTO);
         if (provinceDTO.getId() != null) {
             throw new BadRequestAlertException("A new province cannot already have an ID", ENTITY_NAME, "idexists");
         }
         ProvinceDTO result = provinceService.save(provinceDTO);
-        return ResponseEntity.created(new URI("/api/provinces/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
-            .body(result);
+        return Result.createSuccess(result);
     }
 
     /**
@@ -71,9 +78,7 @@ public class ProvinceResource {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
         ProvinceDTO result = provinceService.save(provinceDTO);
-        return ResponseEntity.ok()
-            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, provinceDTO.getId().toString()))
-            .body(result);
+        return Result.createSuccess(result);
     }
 
     /**
@@ -83,9 +88,9 @@ public class ProvinceResource {
      */
     @GetMapping("/provinces")
     @Timed
-    public List<ProvinceDTO> getAllProvinces() {
+    public Result<List<ProvinceDTO>> getAllProvinces() {
         log.debug("REST request to get all Provinces");
-        return provinceService.findAll();
+        return Result.createSuccess(provinceService.findAll()) ;
     }
 
     /**
@@ -96,10 +101,10 @@ public class ProvinceResource {
      */
     @GetMapping("/provinces/{id}")
     @Timed
-    public ResponseEntity<ProvinceDTO> getProvince(@PathVariable Long id) {
+    public Result<ProvinceDTO> getProvince(@PathVariable Long id) {
         log.debug("REST request to get Province : {}", id);
         Optional<ProvinceDTO> provinceDTO = provinceService.findOne(id);
-        return ResponseUtil.wrapOrNotFound(provinceDTO);
+        return Result.createFromOptional(provinceDTO);
     }
 
     /**
@@ -110,9 +115,9 @@ public class ProvinceResource {
      */
     @DeleteMapping("/provinces/{id}")
     @Timed
-    public ResponseEntity<Void> deleteProvince(@PathVariable Long id) {
+    public Result<Void> deleteProvince(@PathVariable Long id) {
         log.debug("REST request to delete Province : {}", id);
         provinceService.delete(id);
-        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
+        return Result.createSuccess(null);
     }
 }
