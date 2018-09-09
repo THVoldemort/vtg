@@ -46,7 +46,23 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="jhi_rank" type="integer">
+            <column name="view_count" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="convenient" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="introduction" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="confirm_booking_type" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="rating_id" type="integer">
                 <constraints nullable="true" />
             </column>
 

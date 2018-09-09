@@ -31,11 +31,8 @@ public class Place implements Serializable {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "jhi_rank")
-    private Integer rank;
-
-    @Column(name = "comment_id")
-    private Integer commentId;
+    @Column(name = "rating_id")
+    private Integer ratingId;
 
     @Column(name = "file_path_1")
     private String filePath1;
@@ -118,30 +115,17 @@ public class Place implements Serializable {
         this.address = address;
     }
 
-    public Integer getRank() {
-        return rank;
+    public Integer getRatingId() {
+        return ratingId;
     }
 
-    public Place rank(Integer rank) {
-        this.rank = rank;
+    public Place ratingId(Integer ratingId) {
+        this.ratingId = ratingId;
         return this;
     }
 
-    public void setRank(Integer rank) {
-        this.rank = rank;
-    }
-
-    public Integer getCommentId() {
-        return commentId;
-    }
-
-    public Place commentId(Integer commentId) {
-        this.commentId = commentId;
-        return this;
-    }
-
-    public void setCommentId(Integer commentId) {
-        this.commentId = commentId;
+    public void setRatingId(Integer ratingId) {
+        this.ratingId = ratingId;
     }
 
     public String getFilePath1() {
@@ -315,8 +299,7 @@ public class Place implements Serializable {
             ", name='" + getName() + "'" +
             ", slogan='" + getSlogan() + "'" +
             ", address='" + getAddress() + "'" +
-            ", rank=" + getRank() +
-            ", commentId=" + getCommentId() +
+            ", ratingId=" + getRatingId() +
             ", filePath1='" + getFilePath1() + "'" +
             ", filePath2='" + getFilePath2() + "'" +
             ", filePath3='" + getFilePath3() + "'" +

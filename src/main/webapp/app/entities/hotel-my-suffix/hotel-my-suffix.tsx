@@ -85,8 +85,20 @@ export class HotelMySuffix extends React.Component<IHotelMySuffixProps, IHotelMy
                 <th className="hand" onClick={this.sort('priceTo')}>
                   <Translate contentKey="vtgApp.hotel.priceTo">Price To</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
-                <th className="hand" onClick={this.sort('rank')}>
-                  <Translate contentKey="vtgApp.hotel.rank">Rank</Translate> <FontAwesomeIcon icon="sort" />
+                <th className="hand" onClick={this.sort('viewCount')}>
+                  <Translate contentKey="vtgApp.hotel.viewCount">View Count</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('convenient')}>
+                  <Translate contentKey="vtgApp.hotel.convenient">Convenient</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('introduction')}>
+                  <Translate contentKey="vtgApp.hotel.introduction">Introduction</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('confirmBookingType')}>
+                  <Translate contentKey="vtgApp.hotel.confirmBookingType">Confirm Booking Type</Translate> <FontAwesomeIcon icon="sort" />
+                </th>
+                <th className="hand" onClick={this.sort('ratingId')}>
+                  <Translate contentKey="vtgApp.hotel.ratingId">Rating Id</Translate> <FontAwesomeIcon icon="sort" />
                 </th>
                 <th className="hand" onClick={this.sort('latitude')}>
                   <Translate contentKey="vtgApp.hotel.latitude">Latitude</Translate> <FontAwesomeIcon icon="sort" />
@@ -135,7 +147,11 @@ export class HotelMySuffix extends React.Component<IHotelMySuffixProps, IHotelMy
                   <td>{hotel.address}</td>
                   <td>{hotel.priceFrom}</td>
                   <td>{hotel.priceTo}</td>
-                  <td>{hotel.rank}</td>
+                  <td>{hotel.viewCount}</td>
+                  <td>{hotel.convenient}</td>
+                  <td>{hotel.introduction}</td>
+                  <td>{hotel.confirmBookingType}</td>
+                  <td>{hotel.ratingId}</td>
                   <td>{hotel.latitude}</td>
                   <td>{hotel.longitude}</td>
                   <td>{hotel.provinceId}</td>

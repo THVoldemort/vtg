@@ -34,7 +34,7 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "commentId",
+            "fieldName": "ratingId",
             "fieldType": "Integer"
         }
     ],

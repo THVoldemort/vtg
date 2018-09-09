@@ -28,6 +28,24 @@ public class HotelRoom implements Serializable {
     @Column(name = "introduction")
     private String introduction;
 
+    @Column(name = "convenient")
+    private Integer convenient;
+
+    @Column(name = "cancel_fee_day_1")
+    private Integer cancelFeeDay1;
+
+    @Column(name = "cancel_fee_day_2")
+    private Integer cancelFeeDay2;
+
+    @Column(name = "cancel_fee_time_1")
+    private String cancelFeeTime1;
+
+    @Column(name = "cancel_fee_time_2")
+    private String cancelFeeTime2;
+
+    @Column(name = "rating_id")
+    private Integer ratingId;
+
     @Column(name = "num_of_adult")
     private Integer numOfAdult;
 
@@ -91,6 +109,84 @@ public class HotelRoom implements Serializable {
 
     public void setIntroduction(String introduction) {
         this.introduction = introduction;
+    }
+
+    public Integer getConvenient() {
+        return convenient;
+    }
+
+    public HotelRoom convenient(Integer convenient) {
+        this.convenient = convenient;
+        return this;
+    }
+
+    public void setConvenient(Integer convenient) {
+        this.convenient = convenient;
+    }
+
+    public Integer getCancelFeeDay1() {
+        return cancelFeeDay1;
+    }
+
+    public HotelRoom cancelFeeDay1(Integer cancelFeeDay1) {
+        this.cancelFeeDay1 = cancelFeeDay1;
+        return this;
+    }
+
+    public void setCancelFeeDay1(Integer cancelFeeDay1) {
+        this.cancelFeeDay1 = cancelFeeDay1;
+    }
+
+    public Integer getCancelFeeDay2() {
+        return cancelFeeDay2;
+    }
+
+    public HotelRoom cancelFeeDay2(Integer cancelFeeDay2) {
+        this.cancelFeeDay2 = cancelFeeDay2;
+        return this;
+    }
+
+    public void setCancelFeeDay2(Integer cancelFeeDay2) {
+        this.cancelFeeDay2 = cancelFeeDay2;
+    }
+
+    public String getCancelFeeTime1() {
+        return cancelFeeTime1;
+    }
+
+    public HotelRoom cancelFeeTime1(String cancelFeeTime1) {
+        this.cancelFeeTime1 = cancelFeeTime1;
+        return this;
+    }
+
+    public void setCancelFeeTime1(String cancelFeeTime1) {
+        this.cancelFeeTime1 = cancelFeeTime1;
+    }
+
+    public String getCancelFeeTime2() {
+        return cancelFeeTime2;
+    }
+
+    public HotelRoom cancelFeeTime2(String cancelFeeTime2) {
+        this.cancelFeeTime2 = cancelFeeTime2;
+        return this;
+    }
+
+    public void setCancelFeeTime2(String cancelFeeTime2) {
+        this.cancelFeeTime2 = cancelFeeTime2;
+    }
+
+    public Integer getRatingId() {
+        return ratingId;
+    }
+
+    public HotelRoom ratingId(Integer ratingId) {
+        this.ratingId = ratingId;
+        return this;
+    }
+
+    public void setRatingId(Integer ratingId) {
+        this.ratingId = ratingId;
     }
 
     public Integer getNumOfAdult() {
@@ -250,6 +346,12 @@ public class HotelRoom implements Serializable {
             "id=" + getId() +
             ", type=" + getType() +
             ", introduction='" + getIntroduction() + "'" +
+            ", convenient=" + getConvenient() +
+            ", cancelFeeDay1=" + getCancelFeeDay1() +
+            ", cancelFeeDay2=" + getCancelFeeDay2() +
+            ", cancelFeeTime1='" + getCancelFeeTime1() + "'" +
+            ", cancelFeeTime2='" + getCancelFeeTime2() + "'" +
+            ", ratingId=" + getRatingId() +
             ", numOfAdult=" + getNumOfAdult() +
             ", numOfChild=" + getNumOfChild() +
             ", priceEst=" + getPriceEst() +

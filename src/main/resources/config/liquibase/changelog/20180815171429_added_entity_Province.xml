@@ -54,7 +54,7 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="comment_id" type="integer">
+            <column name="rating_id" type="integer">
                 <constraints nullable="true" />
             </column>
 

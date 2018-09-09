@@ -133,10 +133,10 @@ export class ProvinceMySuffixUpdate extends React.Component<IProvinceMySuffixUpd
                   <AvField id="province-my-suffix-filePath5" type="text" name="filePath5" />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="commentIdLabel" for="commentId">
-                    <Translate contentKey="vtgApp.province.commentId">Comment Id</Translate>
+                  <Label id="ratingIdLabel" for="ratingId">
+                    <Translate contentKey="vtgApp.province.ratingId">Rating Id</Translate>
                   </Label>
-                  <AvField id="province-my-suffix-commentId" type="number" className="form-control" name="commentId" />
+                  <AvField id="province-my-suffix-ratingId" type="number" className="form-control" name="ratingId" />
                 </AvGroup>
                 <Button tag={Link} id="cancel-save" to="/entity/province-my-suffix" replace color="info">
                   <FontAwesomeIcon icon="arrow-left" />&nbsp;

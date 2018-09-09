@@ -8,7 +8,7 @@ export interface IProvinceMySuffix {
   filePath3?: string;
   filePath4?: string;
   filePath5?: string;
-  commentId?: number;
+  ratingId?: number;
 }
 
 export const defaultValue: Readonly<IProvinceMySuffix> = {};

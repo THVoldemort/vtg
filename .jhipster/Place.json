@@ -14,11 +14,7 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "rank",
-            "fieldType": "Integer"
-        },
-        {
-            "fieldName": "commentId",
+            "fieldName": "ratingId",
             "fieldType": "Integer"
         },
         {

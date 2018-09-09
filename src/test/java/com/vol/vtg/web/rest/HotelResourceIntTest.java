@@ -61,8 +61,20 @@ public class HotelResourceIntTest {
     private static final Double DEFAULT_PRICE_TO = 1D;
     private static final Double UPDATED_PRICE_TO = 2D;
 
-    private static final Integer DEFAULT_RANK = 1;
-    private static final Integer UPDATED_RANK = 2;
+    private static final Integer DEFAULT_VIEW_COUNT = 1;
+    private static final Integer UPDATED_VIEW_COUNT = 2;
+
+    private static final Integer DEFAULT_CONVENIENT = 1;
+    private static final Integer UPDATED_CONVENIENT = 2;
+
+    private static final String DEFAULT_INTRODUCTION = "AAAAAAAAAA";
+    private static final String UPDATED_INTRODUCTION = "BBBBBBBBBB";
+
+    private static final Integer DEFAULT_CONFIRM_BOOKING_TYPE = 1;
+    private static final Integer UPDATED_CONFIRM_BOOKING_TYPE = 2;
+
+    private static final Integer DEFAULT_RATING_ID = 1;
+    private static final Integer UPDATED_RATING_ID = 2;
 
     private static final Double DEFAULT_LATITUDE = 1D;
     private static final Double UPDATED_LATITUDE = 2D;
@@ -146,7 +158,11 @@ public class HotelResourceIntTest {
             .address(DEFAULT_ADDRESS)
             .priceFrom(DEFAULT_PRICE_FROM)
             .priceTo(DEFAULT_PRICE_TO)
-            .rank(DEFAULT_RANK)
+            .viewCount(DEFAULT_VIEW_COUNT)
+            .convenient(DEFAULT_CONVENIENT)
+            .introduction(DEFAULT_INTRODUCTION)
+            .confirmBookingType(DEFAULT_CONFIRM_BOOKING_TYPE)
+            .ratingId(DEFAULT_RATING_ID)
             .latitude(DEFAULT_LATITUDE)
             .longitude(DEFAULT_LONGITUDE)
             .provinceId(DEFAULT_PROVINCE_ID)
@@ -187,7 +203,11 @@ public class HotelResourceIntTest {
         assertThat(testHotel.getAddress()).isEqualTo(DEFAULT_ADDRESS);
         assertThat(testHotel.getPriceFrom()).isEqualTo(DEFAULT_PRICE_FROM);
         assertThat(testHotel.getPriceTo()).isEqualTo(DEFAULT_PRICE_TO);
-        assertThat(testHotel.getRank()).isEqualTo(DEFAULT_RANK);
+        assertThat(testHotel.getViewCount()).isEqualTo(DEFAULT_VIEW_COUNT);
+        assertThat(testHotel.getConvenient()).isEqualTo(DEFAULT_CONVENIENT);
+        assertThat(testHotel.getIntroduction()).isEqualTo(DEFAULT_INTRODUCTION);
+        assertThat(testHotel.getConfirmBookingType()).isEqualTo(DEFAULT_CONFIRM_BOOKING_TYPE);
+        assertThat(testHotel.getRatingId()).isEqualTo(DEFAULT_RATING_ID);
         assertThat(testHotel.getLatitude()).isEqualTo(DEFAULT_LATITUDE);
         assertThat(testHotel.getLongitude()).isEqualTo(DEFAULT_LONGITUDE);
         assertThat(testHotel.getProvinceId()).isEqualTo(DEFAULT_PROVINCE_ID);
@@ -237,7 +257,11 @@ public class HotelResourceIntTest {
             .andExpect(jsonPath("$.[*].address").value(hasItem(DEFAULT_ADDRESS.toString())))
             .andExpect(jsonPath("$.[*].priceFrom").value(hasItem(DEFAULT_PRICE_FROM.doubleValue())))
             .andExpect(jsonPath("$.[*].priceTo").value(hasItem(DEFAULT_PRICE_TO.doubleValue())))
-            .andExpect(jsonPath("$.[*].rank").value(hasItem(DEFAULT_RANK)))
+            .andExpect(jsonPath("$.[*].viewCount").value(hasItem(DEFAULT_VIEW_COUNT)))
+            .andExpect(jsonPath("$.[*].convenient").value(hasItem(DEFAULT_CONVENIENT)))
+            .andExpect(jsonPath("$.[*].introduction").value(hasItem(DEFAULT_INTRODUCTION.toString())))
+            .andExpect(jsonPath("$.[*].confirmBookingType").value(hasItem(DEFAULT_CONFIRM_BOOKING_TYPE)))
+            .andExpect(jsonPath("$.[*].ratingId").value(hasItem(DEFAULT_RATING_ID)))
             .andExpect(jsonPath("$.[*].latitude").value(hasItem(DEFAULT_LATITUDE.doubleValue())))
             .andExpect(jsonPath("$.[*].longitude").value(hasItem(DEFAULT_LONGITUDE.doubleValue())))
             .andExpect(jsonPath("$.[*].provinceId").value(hasItem(DEFAULT_PROVINCE_ID)))
@@ -268,7 +292,11 @@ public class HotelResourceIntTest {
             .andExpect(jsonPath("$.address").value(DEFAULT_ADDRESS.toString()))
             .andExpect(jsonPath("$.priceFrom").value(DEFAULT_PRICE_FROM.doubleValue()))
             .andExpect(jsonPath("$.priceTo").value(DEFAULT_PRICE_TO.doubleValue()))
-            .andExpect(jsonPath("$.rank").value(DEFAULT_RANK))
+            .andExpect(jsonPath("$.viewCount").value(DEFAULT_VIEW_COUNT))
+            .andExpect(jsonPath("$.convenient").value(DEFAULT_CONVENIENT))
+            .andExpect(jsonPath("$.introduction").value(DEFAULT_INTRODUCTION.toString()))
+            .andExpect(jsonPath("$.confirmBookingType").value(DEFAULT_CONFIRM_BOOKING_TYPE))
+            .andExpect(jsonPath("$.ratingId").value(DEFAULT_RATING_ID))
             .andExpect(jsonPath("$.latitude").value(DEFAULT_LATITUDE.doubleValue()))
             .andExpect(jsonPath("$.longitude").value(DEFAULT_LONGITUDE.doubleValue()))
             .andExpect(jsonPath("$.provinceId").value(DEFAULT_PROVINCE_ID))
@@ -307,7 +335,11 @@ public class HotelResourceIntTest {
             .address(UPDATED_ADDRESS)
             .priceFrom(UPDATED_PRICE_FROM)
             .priceTo(UPDATED_PRICE_TO)
-            .rank(UPDATED_RANK)
+            .viewCount(UPDATED_VIEW_COUNT)
+            .convenient(UPDATED_CONVENIENT)
+            .introduction(UPDATED_INTRODUCTION)
+            .confirmBookingType(UPDATED_CONFIRM_BOOKING_TYPE)
+            .ratingId(UPDATED_RATING_ID)
             .latitude(UPDATED_LATITUDE)
             .longitude(UPDATED_LONGITUDE)
             .provinceId(UPDATED_PROVINCE_ID)
@@ -335,7 +367,11 @@ public class HotelResourceIntTest {
         assertThat(testHotel.getAddress()).isEqualTo(UPDATED_ADDRESS);
         assertThat(testHotel.getPriceFrom()).isEqualTo(UPDATED_PRICE_FROM);
         assertThat(testHotel.getPriceTo()).isEqualTo(UPDATED_PRICE_TO);
-        assertThat(testHotel.getRank()).isEqualTo(UPDATED_RANK);
+        assertThat(testHotel.getViewCount()).isEqualTo(UPDATED_VIEW_COUNT);
+        assertThat(testHotel.getConvenient()).isEqualTo(UPDATED_CONVENIENT);
+        assertThat(testHotel.getIntroduction()).isEqualTo(UPDATED_INTRODUCTION);
+        assertThat(testHotel.getConfirmBookingType()).isEqualTo(UPDATED_CONFIRM_BOOKING_TYPE);
+        assertThat(testHotel.getRatingId()).isEqualTo(UPDATED_RATING_ID);
         assertThat(testHotel.getLatitude()).isEqualTo(UPDATED_LATITUDE);
         assertThat(testHotel.getLongitude()).isEqualTo(UPDATED_LONGITUDE);
         assertThat(testHotel.getProvinceId()).isEqualTo(UPDATED_PROVINCE_ID);

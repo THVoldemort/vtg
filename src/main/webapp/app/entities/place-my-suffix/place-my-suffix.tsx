@@ -47,10 +47,7 @@ export class PlaceMySuffix extends React.Component<IPlaceMySuffixProps> {
                   <Translate contentKey="vtgApp.place.address">Address</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="vtgApp.place.rank">Rank</Translate>
-                </th>
-                <th>
-                  <Translate contentKey="vtgApp.place.commentId">Comment Id</Translate>
+                  <Translate contentKey="vtgApp.place.ratingId">Rating Id</Translate>
                 </th>
                 <th>
                   <Translate contentKey="vtgApp.place.filePath1">File Path 1</Translate>
@@ -99,8 +96,7 @@ export class PlaceMySuffix extends React.Component<IPlaceMySuffixProps> {
                   <td>{place.name}</td>
                   <td>{place.slogan}</td>
                   <td>{place.address}</td>
-                  <td>{place.rank}</td>
-                  <td>{place.commentId}</td>
+                  <td>{place.ratingId}</td>
                   <td>{place.filePath1}</td>
                   <td>{place.filePath2}</td>
                   <td>{place.filePath3}</td>

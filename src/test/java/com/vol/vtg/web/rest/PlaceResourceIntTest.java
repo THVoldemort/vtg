@@ -51,11 +51,8 @@ public class PlaceResourceIntTest {
     private static final String DEFAULT_ADDRESS = "AAAAAAAAAA";
     private static final String UPDATED_ADDRESS = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_RANK = 1;
-    private static final Integer UPDATED_RANK = 2;
-
-    private static final Integer DEFAULT_COMMENT_ID = 1;
-    private static final Integer UPDATED_COMMENT_ID = 2;
+    private static final Integer DEFAULT_RATING_ID = 1;
+    private static final Integer UPDATED_RATING_ID = 2;
 
     private static final String DEFAULT_FILE_PATH_1 = "AAAAAAAAAA";
     private static final String UPDATED_FILE_PATH_1 = "BBBBBBBBBB";
@@ -139,8 +136,7 @@ public class PlaceResourceIntTest {
             .name(DEFAULT_NAME)
             .slogan(DEFAULT_SLOGAN)
             .address(DEFAULT_ADDRESS)
-            .rank(DEFAULT_RANK)
-            .commentId(DEFAULT_COMMENT_ID)
+            .ratingId(DEFAULT_RATING_ID)
             .filePath1(DEFAULT_FILE_PATH_1)
             .filePath2(DEFAULT_FILE_PATH_2)
             .filePath3(DEFAULT_FILE_PATH_3)
@@ -179,8 +175,7 @@ public class PlaceResourceIntTest {
         assertThat(testPlace.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testPlace.getSlogan()).isEqualTo(DEFAULT_SLOGAN);
         assertThat(testPlace.getAddress()).isEqualTo(DEFAULT_ADDRESS);
-        assertThat(testPlace.getRank()).isEqualTo(DEFAULT_RANK);
-        assertThat(testPlace.getCommentId()).isEqualTo(DEFAULT_COMMENT_ID);
+        assertThat(testPlace.getRatingId()).isEqualTo(DEFAULT_RATING_ID);
         assertThat(testPlace.getFilePath1()).isEqualTo(DEFAULT_FILE_PATH_1);
         assertThat(testPlace.getFilePath2()).isEqualTo(DEFAULT_FILE_PATH_2);
         assertThat(testPlace.getFilePath3()).isEqualTo(DEFAULT_FILE_PATH_3);
@@ -228,8 +223,7 @@ public class PlaceResourceIntTest {
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
             .andExpect(jsonPath("$.[*].slogan").value(hasItem(DEFAULT_SLOGAN.toString())))
             .andExpect(jsonPath("$.[*].address").value(hasItem(DEFAULT_ADDRESS.toString())))
-            .andExpect(jsonPath("$.[*].rank").value(hasItem(DEFAULT_RANK)))
-            .andExpect(jsonPath("$.[*].commentId").value(hasItem(DEFAULT_COMMENT_ID)))
+            .andExpect(jsonPath("$.[*].ratingId").value(hasItem(DEFAULT_RATING_ID)))
             .andExpect(jsonPath("$.[*].filePath1").value(hasItem(DEFAULT_FILE_PATH_1.toString())))
             .andExpect(jsonPath("$.[*].filePath2").value(hasItem(DEFAULT_FILE_PATH_2.toString())))
             .andExpect(jsonPath("$.[*].filePath3").value(hasItem(DEFAULT_FILE_PATH_3.toString())))
@@ -258,8 +252,7 @@ public class PlaceResourceIntTest {
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
             .andExpect(jsonPath("$.slogan").value(DEFAULT_SLOGAN.toString()))
             .andExpect(jsonPath("$.address").value(DEFAULT_ADDRESS.toString()))
-            .andExpect(jsonPath("$.rank").value(DEFAULT_RANK))
-            .andExpect(jsonPath("$.commentId").value(DEFAULT_COMMENT_ID))
+            .andExpect(jsonPath("$.ratingId").value(DEFAULT_RATING_ID))
             .andExpect(jsonPath("$.filePath1").value(DEFAULT_FILE_PATH_1.toString()))
             .andExpect(jsonPath("$.filePath2").value(DEFAULT_FILE_PATH_2.toString()))
             .andExpect(jsonPath("$.filePath3").value(DEFAULT_FILE_PATH_3.toString()))
@@ -296,8 +289,7 @@ public class PlaceResourceIntTest {
             .name(UPDATED_NAME)
             .slogan(UPDATED_SLOGAN)
             .address(UPDATED_ADDRESS)
-            .rank(UPDATED_RANK)
-            .commentId(UPDATED_COMMENT_ID)
+            .ratingId(UPDATED_RATING_ID)
             .filePath1(UPDATED_FILE_PATH_1)
             .filePath2(UPDATED_FILE_PATH_2)
             .filePath3(UPDATED_FILE_PATH_3)
@@ -323,8 +315,7 @@ public class PlaceResourceIntTest {
         assertThat(testPlace.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testPlace.getSlogan()).isEqualTo(UPDATED_SLOGAN);
         assertThat(testPlace.getAddress()).isEqualTo(UPDATED_ADDRESS);
-        assertThat(testPlace.getRank()).isEqualTo(UPDATED_RANK);
-        assertThat(testPlace.getCommentId()).isEqualTo(UPDATED_COMMENT_ID);
+        assertThat(testPlace.getRatingId()).isEqualTo(UPDATED_RATING_ID);
         assertThat(testPlace.getFilePath1()).isEqualTo(UPDATED_FILE_PATH_1);
         assertThat(testPlace.getFilePath2()).isEqualTo(UPDATED_FILE_PATH_2);
         assertThat(testPlace.getFilePath3()).isEqualTo(UPDATED_FILE_PATH_3);

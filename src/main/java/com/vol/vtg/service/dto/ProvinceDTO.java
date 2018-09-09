@@ -26,7 +26,7 @@ public class ProvinceDTO implements Serializable {
 
     private String filePath5;
 
-    private Integer commentId;
+    private Integer ratingId;
 
     public Long getId() {
         return id;
@@ -100,12 +100,12 @@ public class ProvinceDTO implements Serializable {
         this.filePath5 = filePath5;
     }
 
-    public Integer getCommentId() {
-        return commentId;
+    public Integer getRatingId() {
+        return ratingId;
     }
 
-    public void setCommentId(Integer commentId) {
-        this.commentId = commentId;
+    public void setRatingId(Integer ratingId) {
+        this.ratingId = ratingId;
     }
 
     @Override
@@ -141,7 +141,7 @@ public class ProvinceDTO implements Serializable {
             ", filePath3='" + getFilePath3() + "'" +
             ", filePath4='" + getFilePath4() + "'" +
             ", filePath5='" + getFilePath5() + "'" +
-            ", commentId=" + getCommentId() +
+            ", ratingId=" + getRatingId() +
             "}";
     }
 }

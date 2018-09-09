@@ -62,7 +62,7 @@ export class ProvinceMySuffix extends React.Component<IProvinceMySuffixProps> {
                   <Translate contentKey="vtgApp.province.filePath5">File Path 5</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="vtgApp.province.commentId">Comment Id</Translate>
+                  <Translate contentKey="vtgApp.province.ratingId">Rating Id</Translate>
                 </th>
                 <th />
               </tr>
@@ -83,7 +83,7 @@ export class ProvinceMySuffix extends React.Component<IProvinceMySuffixProps> {
                   <td>{province.filePath3}</td>
                   <td>{province.filePath4}</td>
                   <td>{province.filePath5}</td>
-                  <td>{province.commentId}</td>
+                  <td>{province.ratingId}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${province.id}`} color="info" size="sm">

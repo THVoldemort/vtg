@@ -44,6 +44,24 @@ export class HotelRoomMySuffix extends React.Component<IHotelRoomMySuffixProps> 
                   <Translate contentKey="vtgApp.hotelRoom.introduction">Introduction</Translate>
                 </th>
                 <th>
+                  <Translate contentKey="vtgApp.hotelRoom.convenient">Convenient</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="vtgApp.hotelRoom.cancelFeeDay1">Cancel Fee Day 1</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="vtgApp.hotelRoom.cancelFeeDay2">Cancel Fee Day 2</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="vtgApp.hotelRoom.cancelFeeTime1">Cancel Fee Time 1</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="vtgApp.hotelRoom.cancelFeeTime2">Cancel Fee Time 2</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="vtgApp.hotelRoom.ratingId">Rating Id</Translate>
+                </th>
+                <th>
                   <Translate contentKey="vtgApp.hotelRoom.numOfAdult">Num Of Adult</Translate>
                 </th>
                 <th>
@@ -86,6 +104,12 @@ export class HotelRoomMySuffix extends React.Component<IHotelRoomMySuffixProps> 
                   </td>
                   <td>{hotelRoom.type}</td>
                   <td>{hotelRoom.introduction}</td>
+                  <td>{hotelRoom.convenient}</td>
+                  <td>{hotelRoom.cancelFeeDay1}</td>
+                  <td>{hotelRoom.cancelFeeDay2}</td>
+                  <td>{hotelRoom.cancelFeeTime1}</td>
+                  <td>{hotelRoom.cancelFeeTime2}</td>
+                  <td>{hotelRoom.ratingId}</td>
                   <td>{hotelRoom.numOfAdult}</td>
                   <td>{hotelRoom.numOfChild}</td>
                   <td>{hotelRoom.priceEst}</td>

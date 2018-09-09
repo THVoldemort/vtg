@@ -41,6 +41,42 @@ export class HotelRoomMySuffixDetail extends React.Component<IHotelRoomMySuffixD
             </dt>
             <dd>{hotelRoomEntity.introduction}</dd>
             <dt>
+              <span id="convenient">
+                <Translate contentKey="vtgApp.hotelRoom.convenient">Convenient</Translate>
+              </span>
+            </dt>
+            <dd>{hotelRoomEntity.convenient}</dd>
+            <dt>
+              <span id="cancelFeeDay1">
+                <Translate contentKey="vtgApp.hotelRoom.cancelFeeDay1">Cancel Fee Day 1</Translate>
+              </span>
+            </dt>
+            <dd>{hotelRoomEntity.cancelFeeDay1}</dd>
+            <dt>
+              <span id="cancelFeeDay2">
+                <Translate contentKey="vtgApp.hotelRoom.cancelFeeDay2">Cancel Fee Day 2</Translate>
+              </span>
+            </dt>
+            <dd>{hotelRoomEntity.cancelFeeDay2}</dd>
+            <dt>
+              <span id="cancelFeeTime1">
+                <Translate contentKey="vtgApp.hotelRoom.cancelFeeTime1">Cancel Fee Time 1</Translate>
+              </span>
+            </dt>
+            <dd>{hotelRoomEntity.cancelFeeTime1}</dd>
+            <dt>
+              <span id="cancelFeeTime2">
+                <Translate contentKey="vtgApp.hotelRoom.cancelFeeTime2">Cancel Fee Time 2</Translate>
+              </span>
+            </dt>
+            <dd>{hotelRoomEntity.cancelFeeTime2}</dd>
+            <dt>
+              <span id="ratingId">
+                <Translate contentKey="vtgApp.hotelRoom.ratingId">Rating Id</Translate>
+              </span>
+            </dt>
+            <dd>{hotelRoomEntity.ratingId}</dd>
+            <dt>
               <span id="numOfAdult">
                 <Translate contentKey="vtgApp.hotelRoom.numOfAdult">Num Of Adult</Translate>
               </span>

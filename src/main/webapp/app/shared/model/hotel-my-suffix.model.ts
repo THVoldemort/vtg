@@ -15,7 +15,11 @@ export interface IHotelMySuffix {
   address?: string;
   priceFrom?: number;
   priceTo?: number;
-  rank?: number;
+  viewCount?: number;
+  convenient?: number;
+  introduction?: string;
+  confirmBookingType?: number;
+  ratingId?: number;
   latitude?: number;
   longitude?: number;
   provinceId?: number;

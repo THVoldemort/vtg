@@ -47,17 +47,11 @@ export class PlaceMySuffixDetail extends React.Component<IPlaceMySuffixDetailPro
             </dt>
             <dd>{placeEntity.address}</dd>
             <dt>
-              <span id="rank">
-                <Translate contentKey="vtgApp.place.rank">Rank</Translate>
+              <span id="ratingId">
+                <Translate contentKey="vtgApp.place.ratingId">Rating Id</Translate>
               </span>
             </dt>
-            <dd>{placeEntity.rank}</dd>
-            <dt>
-              <span id="commentId">
-                <Translate contentKey="vtgApp.place.commentId">Comment Id</Translate>
-              </span>
-            </dt>
-            <dd>{placeEntity.commentId}</dd>
+            <dd>{placeEntity.ratingId}</dd>
             <dt>
               <span id="filePath1">
                 <Translate contentKey="vtgApp.place.filePath1">File Path 1</Translate>

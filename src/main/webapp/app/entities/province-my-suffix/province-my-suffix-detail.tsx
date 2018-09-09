@@ -77,11 +77,11 @@ export class ProvinceMySuffixDetail extends React.Component<IProvinceMySuffixDet
             </dt>
             <dd>{provinceEntity.filePath5}</dd>
             <dt>
-              <span id="commentId">
-                <Translate contentKey="vtgApp.province.commentId">Comment Id</Translate>
+              <span id="ratingId">
+                <Translate contentKey="vtgApp.province.ratingId">Rating Id</Translate>
               </span>
             </dt>
-            <dd>{provinceEntity.commentId}</dd>
+            <dd>{provinceEntity.ratingId}</dd>
           </dl>
           <Button tag={Link} to="/entity/province-my-suffix" replace color="info">
             <FontAwesomeIcon icon="arrow-left" />{' '}

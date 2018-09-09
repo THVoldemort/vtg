@@ -1,30 +1,21 @@
 package com.vol.vtg.web.rest;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.List;
-import java.util.Optional;
-
+import com.codahale.metrics.annotation.Timed;
+import com.vol.vtg.service.PlaceService;
+import com.vol.vtg.web.rest.errors.BadRequestAlertException;
+import com.vol.vtg.web.rest.util.HeaderUtil;
+import com.vol.vtg.service.dto.PlaceDTO;
+import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.codahale.metrics.annotation.Timed;
-import com.vol.vtg.common.Result;
-import com.vol.vtg.service.PlaceService;
-import com.vol.vtg.service.dto.PlaceDTO;
-import com.vol.vtg.web.rest.errors.BadRequestAlertException;
-import com.vol.vtg.web.rest.util.HeaderUtil;
+import java.net.URI;
+import java.net.URISyntaxException;
 
-import io.github.jhipster.web.util.ResponseUtil;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * REST controller for managing Place.
@@ -52,13 +43,15 @@ public class PlaceResource {
      */
     @PostMapping("/places")
     @Timed
-    public Result<PlaceDTO> createPlace(@RequestBody PlaceDTO placeDTO) throws URISyntaxException {
+    public ResponseEntity<PlaceDTO> createPlace(@RequestBody PlaceDTO placeDTO) throws URISyntaxException {
         log.debug("REST request to save Place : {}", placeDTO);
         if (placeDTO.getId() != null) {
             throw new BadRequestAlertException("A new place cannot already have an ID", ENTITY_NAME, "idexists");
         }
         PlaceDTO result = placeService.save(placeDTO);
-        return Result.createSuccess(result);
+        return ResponseEntity.created(new URI("/api/places/" + result.getId()))
+            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
+            .body(result);
     }
 
     /**
@@ -72,13 +65,15 @@ public class PlaceResource {
      */
     @PutMapping("/places")
     @Timed
-    public Result<PlaceDTO> updatePlace(@RequestBody PlaceDTO placeDTO) throws URISyntaxException {
+    public ResponseEntity<PlaceDTO> updatePlace(@RequestBody PlaceDTO placeDTO) throws URISyntaxException {
         log.debug("REST request to update Place : {}", placeDTO);
         if (placeDTO.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
         PlaceDTO result = placeService.save(placeDTO);
-        return Result.createSuccess(result);
+        return ResponseEntity.ok()
+            .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, placeDTO.getId().toString()))
+            .body(result);
     }
 
     /**
@@ -88,9 +83,9 @@ public class PlaceResource {
      */
     @GetMapping("/places")
     @Timed
-    public Result<List<PlaceDTO>> getAllPlaces() {
+    public List<PlaceDTO> getAllPlaces() {
         log.debug("REST request to get all Places");
-        return Result.createSuccess(placeService.findAll());
+        return placeService.findAll();
     }
 
     /**
@@ -101,10 +96,10 @@ public class PlaceResource {
      */
     @GetMapping("/places/{id}")
     @Timed
-    public Result<PlaceDTO> getPlace(@PathVariable Long id) {
+    public ResponseEntity<PlaceDTO> getPlace(@PathVariable Long id) {
         log.debug("REST request to get Place : {}", id);
         Optional<PlaceDTO> placeDTO = placeService.findOne(id);
-        return Result.createFromOptional(placeDTO);
+        return ResponseUtil.wrapOrNotFound(placeDTO);
     }
 
     /**
@@ -115,9 +110,9 @@ public class PlaceResource {
      */
     @DeleteMapping("/places/{id}")
     @Timed
-    public Result<Void> deletePlace(@PathVariable Long id) {
+    public ResponseEntity<Void> deletePlace(@PathVariable Long id) {
         log.debug("REST request to delete Place : {}", id);
         placeService.delete(id);
-        return Result.createSuccess(null);
+        return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
 }

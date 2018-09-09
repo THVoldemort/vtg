@@ -48,6 +48,24 @@ public class HotelRoomResourceIntTest {
     private static final String DEFAULT_INTRODUCTION = "AAAAAAAAAA";
     private static final String UPDATED_INTRODUCTION = "BBBBBBBBBB";
 
+    private static final Integer DEFAULT_CONVENIENT = 1;
+    private static final Integer UPDATED_CONVENIENT = 2;
+
+    private static final Integer DEFAULT_CANCEL_FEE_DAY_1 = 1;
+    private static final Integer UPDATED_CANCEL_FEE_DAY_1 = 2;
+
+    private static final Integer DEFAULT_CANCEL_FEE_DAY_2 = 1;
+    private static final Integer UPDATED_CANCEL_FEE_DAY_2 = 2;
+
+    private static final String DEFAULT_CANCEL_FEE_TIME_1 = "AAAAAAAAAA";
+    private static final String UPDATED_CANCEL_FEE_TIME_1 = "BBBBBBBBBB";
+
+    private static final String DEFAULT_CANCEL_FEE_TIME_2 = "AAAAAAAAAA";
+    private static final String UPDATED_CANCEL_FEE_TIME_2 = "BBBBBBBBBB";
+
+    private static final Integer DEFAULT_RATING_ID = 1;
+    private static final Integer UPDATED_RATING_ID = 2;
+
     private static final Integer DEFAULT_NUM_OF_ADULT = 1;
     private static final Integer UPDATED_NUM_OF_ADULT = 2;
 
@@ -126,6 +144,12 @@ public class HotelRoomResourceIntTest {
         HotelRoom hotelRoom = new HotelRoom()
             .type(DEFAULT_TYPE)
             .introduction(DEFAULT_INTRODUCTION)
+            .convenient(DEFAULT_CONVENIENT)
+            .cancelFeeDay1(DEFAULT_CANCEL_FEE_DAY_1)
+            .cancelFeeDay2(DEFAULT_CANCEL_FEE_DAY_2)
+            .cancelFeeTime1(DEFAULT_CANCEL_FEE_TIME_1)
+            .cancelFeeTime2(DEFAULT_CANCEL_FEE_TIME_2)
+            .ratingId(DEFAULT_RATING_ID)
             .numOfAdult(DEFAULT_NUM_OF_ADULT)
             .numOfChild(DEFAULT_NUM_OF_CHILD)
             .priceEst(DEFAULT_PRICE_EST)
@@ -162,6 +186,12 @@ public class HotelRoomResourceIntTest {
         HotelRoom testHotelRoom = hotelRoomList.get(hotelRoomList.size() - 1);
         assertThat(testHotelRoom.getType()).isEqualTo(DEFAULT_TYPE);
         assertThat(testHotelRoom.getIntroduction()).isEqualTo(DEFAULT_INTRODUCTION);
+        assertThat(testHotelRoom.getConvenient()).isEqualTo(DEFAULT_CONVENIENT);
+        assertThat(testHotelRoom.getCancelFeeDay1()).isEqualTo(DEFAULT_CANCEL_FEE_DAY_1);
+        assertThat(testHotelRoom.getCancelFeeDay2()).isEqualTo(DEFAULT_CANCEL_FEE_DAY_2);
+        assertThat(testHotelRoom.getCancelFeeTime1()).isEqualTo(DEFAULT_CANCEL_FEE_TIME_1);
+        assertThat(testHotelRoom.getCancelFeeTime2()).isEqualTo(DEFAULT_CANCEL_FEE_TIME_2);
+        assertThat(testHotelRoom.getRatingId()).isEqualTo(DEFAULT_RATING_ID);
         assertThat(testHotelRoom.getNumOfAdult()).isEqualTo(DEFAULT_NUM_OF_ADULT);
         assertThat(testHotelRoom.getNumOfChild()).isEqualTo(DEFAULT_NUM_OF_CHILD);
         assertThat(testHotelRoom.getPriceEst()).isEqualTo(DEFAULT_PRICE_EST);
@@ -207,6 +237,12 @@ public class HotelRoomResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(hotelRoom.getId().intValue())))
             .andExpect(jsonPath("$.[*].type").value(hasItem(DEFAULT_TYPE)))
             .andExpect(jsonPath("$.[*].introduction").value(hasItem(DEFAULT_INTRODUCTION.toString())))
+            .andExpect(jsonPath("$.[*].convenient").value(hasItem(DEFAULT_CONVENIENT)))
+            .andExpect(jsonPath("$.[*].cancelFeeDay1").value(hasItem(DEFAULT_CANCEL_FEE_DAY_1)))
+            .andExpect(jsonPath("$.[*].cancelFeeDay2").value(hasItem(DEFAULT_CANCEL_FEE_DAY_2)))
+            .andExpect(jsonPath("$.[*].cancelFeeTime1").value(hasItem(DEFAULT_CANCEL_FEE_TIME_1.toString())))
+            .andExpect(jsonPath("$.[*].cancelFeeTime2").value(hasItem(DEFAULT_CANCEL_FEE_TIME_2.toString())))
+            .andExpect(jsonPath("$.[*].ratingId").value(hasItem(DEFAULT_RATING_ID)))
             .andExpect(jsonPath("$.[*].numOfAdult").value(hasItem(DEFAULT_NUM_OF_ADULT)))
             .andExpect(jsonPath("$.[*].numOfChild").value(hasItem(DEFAULT_NUM_OF_CHILD)))
             .andExpect(jsonPath("$.[*].priceEst").value(hasItem(DEFAULT_PRICE_EST.doubleValue())))
@@ -233,6 +269,12 @@ public class HotelRoomResourceIntTest {
             .andExpect(jsonPath("$.id").value(hotelRoom.getId().intValue()))
             .andExpect(jsonPath("$.type").value(DEFAULT_TYPE))
             .andExpect(jsonPath("$.introduction").value(DEFAULT_INTRODUCTION.toString()))
+            .andExpect(jsonPath("$.convenient").value(DEFAULT_CONVENIENT))
+            .andExpect(jsonPath("$.cancelFeeDay1").value(DEFAULT_CANCEL_FEE_DAY_1))
+            .andExpect(jsonPath("$.cancelFeeDay2").value(DEFAULT_CANCEL_FEE_DAY_2))
+            .andExpect(jsonPath("$.cancelFeeTime1").value(DEFAULT_CANCEL_FEE_TIME_1.toString()))
+            .andExpect(jsonPath("$.cancelFeeTime2").value(DEFAULT_CANCEL_FEE_TIME_2.toString()))
+            .andExpect(jsonPath("$.ratingId").value(DEFAULT_RATING_ID))
             .andExpect(jsonPath("$.numOfAdult").value(DEFAULT_NUM_OF_ADULT))
             .andExpect(jsonPath("$.numOfChild").value(DEFAULT_NUM_OF_CHILD))
             .andExpect(jsonPath("$.priceEst").value(DEFAULT_PRICE_EST.doubleValue()))
@@ -267,6 +309,12 @@ public class HotelRoomResourceIntTest {
         updatedHotelRoom
             .type(UPDATED_TYPE)
             .introduction(UPDATED_INTRODUCTION)
+            .convenient(UPDATED_CONVENIENT)
+            .cancelFeeDay1(UPDATED_CANCEL_FEE_DAY_1)
+            .cancelFeeDay2(UPDATED_CANCEL_FEE_DAY_2)
+            .cancelFeeTime1(UPDATED_CANCEL_FEE_TIME_1)
+            .cancelFeeTime2(UPDATED_CANCEL_FEE_TIME_2)
+            .ratingId(UPDATED_RATING_ID)
             .numOfAdult(UPDATED_NUM_OF_ADULT)
             .numOfChild(UPDATED_NUM_OF_CHILD)
             .priceEst(UPDATED_PRICE_EST)
@@ -290,6 +338,12 @@ public class HotelRoomResourceIntTest {
         HotelRoom testHotelRoom = hotelRoomList.get(hotelRoomList.size() - 1);
         assertThat(testHotelRoom.getType()).isEqualTo(UPDATED_TYPE);
         assertThat(testHotelRoom.getIntroduction()).isEqualTo(UPDATED_INTRODUCTION);
+        assertThat(testHotelRoom.getConvenient()).isEqualTo(UPDATED_CONVENIENT);
+        assertThat(testHotelRoom.getCancelFeeDay1()).isEqualTo(UPDATED_CANCEL_FEE_DAY_1);
+        assertThat(testHotelRoom.getCancelFeeDay2()).isEqualTo(UPDATED_CANCEL_FEE_DAY_2);
+        assertThat(testHotelRoom.getCancelFeeTime1()).isEqualTo(UPDATED_CANCEL_FEE_TIME_1);
+        assertThat(testHotelRoom.getCancelFeeTime2()).isEqualTo(UPDATED_CANCEL_FEE_TIME_2);
+        assertThat(testHotelRoom.getRatingId()).isEqualTo(UPDATED_RATING_ID);
         assertThat(testHotelRoom.getNumOfAdult()).isEqualTo(UPDATED_NUM_OF_ADULT);
         assertThat(testHotelRoom.getNumOfChild()).isEqualTo(UPDATED_NUM_OF_CHILD);
         assertThat(testHotelRoom.getPriceEst()).isEqualTo(UPDATED_PRICE_EST);

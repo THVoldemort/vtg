@@ -30,6 +30,30 @@
                 <constraints nullable="true" />
             </column>
 
+            <column name="convenient" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cancel_fee_day_1" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cancel_fee_day_2" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cancel_fee_time_1" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cancel_fee_time_2" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="rating_id" type="integer">
+                <constraints nullable="true" />
+            </column>
+
             <column name="num_of_adult" type="integer">
                 <constraints nullable="true" />
             </column>

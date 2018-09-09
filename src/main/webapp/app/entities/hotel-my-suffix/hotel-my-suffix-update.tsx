@@ -121,10 +121,34 @@ export class HotelMySuffixUpdate extends React.Component<IHotelMySuffixUpdatePro
                   <AvField id="hotel-my-suffix-priceTo" type="number" className="form-control" name="priceTo" />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="rankLabel" for="rank">
-                    <Translate contentKey="vtgApp.hotel.rank">Rank</Translate>
+                  <Label id="viewCountLabel" for="viewCount">
+                    <Translate contentKey="vtgApp.hotel.viewCount">View Count</Translate>
                   </Label>
-                  <AvField id="hotel-my-suffix-rank" type="number" className="form-control" name="rank" />
+                  <AvField id="hotel-my-suffix-viewCount" type="number" className="form-control" name="viewCount" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="convenientLabel" for="convenient">
+                    <Translate contentKey="vtgApp.hotel.convenient">Convenient</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-convenient" type="number" className="form-control" name="convenient" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="introductionLabel" for="introduction">
+                    <Translate contentKey="vtgApp.hotel.introduction">Introduction</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-introduction" type="text" name="introduction" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="confirmBookingTypeLabel" for="confirmBookingType">
+                    <Translate contentKey="vtgApp.hotel.confirmBookingType">Confirm Booking Type</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-confirmBookingType" type="number" className="form-control" name="confirmBookingType" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="ratingIdLabel" for="ratingId">
+                    <Translate contentKey="vtgApp.hotel.ratingId">Rating Id</Translate>
+                  </Label>
+                  <AvField id="hotel-my-suffix-ratingId" type="number" className="form-control" name="ratingId" />
                 </AvGroup>
                 <AvGroup>
                   <Label id="latitudeLabel" for="latitude">

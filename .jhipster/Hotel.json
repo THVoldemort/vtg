@@ -26,7 +26,23 @@
             "fieldType": "Double"
         },
         {
-            "fieldName": "rank",
+            "fieldName": "viewCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "convenient",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "introduction",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "confirmBookingType",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ratingId",
             "fieldType": "Integer"
         },
         {

@@ -46,8 +46,8 @@ public class Province implements Serializable {
     @Column(name = "file_path_5")
     private String filePath5;
 
-    @Column(name = "comment_id")
-    private Integer commentId;
+    @Column(name = "rating_id")
+    private Integer ratingId;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -162,17 +162,17 @@ public class Province implements Serializable {
         this.filePath5 = filePath5;
     }
 
-    public Integer getCommentId() {
-        return commentId;
+    public Integer getRatingId() {
+        return ratingId;
     }
 
-    public Province commentId(Integer commentId) {
-        this.commentId = commentId;
+    public Province ratingId(Integer ratingId) {
+        this.ratingId = ratingId;
         return this;
     }
 
-    public void setCommentId(Integer commentId) {
-        this.commentId = commentId;
+    public void setRatingId(Integer ratingId) {
+        this.ratingId = ratingId;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
@@ -208,7 +208,7 @@ public class Province implements Serializable {
             ", filePath3='" + getFilePath3() + "'" +
             ", filePath4='" + getFilePath4() + "'" +
             ", filePath5='" + getFilePath5() + "'" +
-            ", commentId=" + getCommentId() +
+            ", ratingId=" + getRatingId() +
             "}";
     }
 }

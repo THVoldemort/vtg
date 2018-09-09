@@ -14,6 +14,18 @@ public class HotelRoomDTO implements Serializable {
 
     private String introduction;
 
+    private Integer convenient;
+
+    private Integer cancelFeeDay1;
+
+    private Integer cancelFeeDay2;
+
+    private String cancelFeeTime1;
+
+    private String cancelFeeTime2;
+
+    private Integer ratingId;
+
     private Integer numOfAdult;
 
     private Integer numOfChild;
@@ -56,6 +68,54 @@ public class HotelRoomDTO implements Serializable {
 
     public void setIntroduction(String introduction) {
         this.introduction = introduction;
+    }
+
+    public Integer getConvenient() {
+        return convenient;
+    }
+
+    public void setConvenient(Integer convenient) {
+        this.convenient = convenient;
+    }
+
+    public Integer getCancelFeeDay1() {
+        return cancelFeeDay1;
+    }
+
+    public void setCancelFeeDay1(Integer cancelFeeDay1) {
+        this.cancelFeeDay1 = cancelFeeDay1;
+    }
+
+    public Integer getCancelFeeDay2() {
+        return cancelFeeDay2;
+    }
+
+    public void setCancelFeeDay2(Integer cancelFeeDay2) {
+        this.cancelFeeDay2 = cancelFeeDay2;
+    }
+
+    public String getCancelFeeTime1() {
+        return cancelFeeTime1;
+    }
+
+    public void setCancelFeeTime1(String cancelFeeTime1) {
+        this.cancelFeeTime1 = cancelFeeTime1;
+    }
+
+    public String getCancelFeeTime2() {
+        return cancelFeeTime2;
+    }
+
+    public void setCancelFeeTime2(String cancelFeeTime2) {
+        this.cancelFeeTime2 = cancelFeeTime2;
+    }
+
+    public Integer getRatingId() {
+        return ratingId;
+    }
+
+    public void setRatingId(Integer ratingId) {
+        this.ratingId = ratingId;
     }
 
     public Integer getNumOfAdult() {
@@ -165,6 +225,12 @@ public class HotelRoomDTO implements Serializable {
             "id=" + getId() +
             ", type=" + getType() +
             ", introduction='" + getIntroduction() + "'" +
+            ", convenient=" + getConvenient() +
+            ", cancelFeeDay1=" + getCancelFeeDay1() +
+            ", cancelFeeDay2=" + getCancelFeeDay2() +
+            ", cancelFeeTime1='" + getCancelFeeTime1() + "'" +
+            ", cancelFeeTime2='" + getCancelFeeTime2() + "'" +
+            ", ratingId=" + getRatingId() +
             ", numOfAdult=" + getNumOfAdult() +
             ", numOfChild=" + getNumOfChild() +
             ", priceEst=" + getPriceEst() +

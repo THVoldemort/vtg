@@ -97,6 +97,42 @@ export class HotelRoomMySuffixUpdate extends React.Component<IHotelRoomMySuffixU
                   <AvField id="hotel-room-my-suffix-introduction" type="text" name="introduction" />
                 </AvGroup>
                 <AvGroup>
+                  <Label id="convenientLabel" for="convenient">
+                    <Translate contentKey="vtgApp.hotelRoom.convenient">Convenient</Translate>
+                  </Label>
+                  <AvField id="hotel-room-my-suffix-convenient" type="number" className="form-control" name="convenient" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="cancelFeeDay1Label" for="cancelFeeDay1">
+                    <Translate contentKey="vtgApp.hotelRoom.cancelFeeDay1">Cancel Fee Day 1</Translate>
+                  </Label>
+                  <AvField id="hotel-room-my-suffix-cancelFeeDay1" type="number" className="form-control" name="cancelFeeDay1" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="cancelFeeDay2Label" for="cancelFeeDay2">
+                    <Translate contentKey="vtgApp.hotelRoom.cancelFeeDay2">Cancel Fee Day 2</Translate>
+                  </Label>
+                  <AvField id="hotel-room-my-suffix-cancelFeeDay2" type="number" className="form-control" name="cancelFeeDay2" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="cancelFeeTime1Label" for="cancelFeeTime1">
+                    <Translate contentKey="vtgApp.hotelRoom.cancelFeeTime1">Cancel Fee Time 1</Translate>
+                  </Label>
+                  <AvField id="hotel-room-my-suffix-cancelFeeTime1" type="text" name="cancelFeeTime1" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="cancelFeeTime2Label" for="cancelFeeTime2">
+                    <Translate contentKey="vtgApp.hotelRoom.cancelFeeTime2">Cancel Fee Time 2</Translate>
+                  </Label>
+                  <AvField id="hotel-room-my-suffix-cancelFeeTime2" type="text" name="cancelFeeTime2" />
+                </AvGroup>
+                <AvGroup>
+                  <Label id="ratingIdLabel" for="ratingId">
+                    <Translate contentKey="vtgApp.hotelRoom.ratingId">Rating Id</Translate>
+                  </Label>
+                  <AvField id="hotel-room-my-suffix-ratingId" type="number" className="form-control" name="ratingId" />
+                </AvGroup>
+                <AvGroup>
                   <Label id="numOfAdultLabel" for="numOfAdult">
                     <Translate contentKey="vtgApp.hotelRoom.numOfAdult">Num Of Adult</Translate>
                   </Label>

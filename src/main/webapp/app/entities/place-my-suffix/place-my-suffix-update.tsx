@@ -103,16 +103,10 @@ export class PlaceMySuffixUpdate extends React.Component<IPlaceMySuffixUpdatePro
                   <AvField id="place-my-suffix-address" type="text" name="address" />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="rankLabel" for="rank">
-                    <Translate contentKey="vtgApp.place.rank">Rank</Translate>
+                  <Label id="ratingIdLabel" for="ratingId">
+                    <Translate contentKey="vtgApp.place.ratingId">Rating Id</Translate>
                   </Label>
-                  <AvField id="place-my-suffix-rank" type="number" className="form-control" name="rank" />
-                </AvGroup>
-                <AvGroup>
-                  <Label id="commentIdLabel" for="commentId">
-                    <Translate contentKey="vtgApp.place.commentId">Comment Id</Translate>
-                  </Label>
-                  <AvField id="place-my-suffix-commentId" type="number" className="form-control" name="commentId" />
+                  <AvField id="place-my-suffix-ratingId" type="number" className="form-control" name="ratingId" />
                 </AvGroup>
                 <AvGroup>
                   <Label id="filePath1Label" for="filePath1">

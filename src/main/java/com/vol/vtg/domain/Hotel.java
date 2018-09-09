@@ -42,8 +42,20 @@ public class Hotel implements Serializable {
     @Column(name = "price_to")
     private Double priceTo;
 
-    @Column(name = "jhi_rank")
-    private Integer rank;
+    @Column(name = "view_count")
+    private Integer viewCount;
+
+    @Column(name = "convenient")
+    private Integer convenient;
+
+    @Column(name = "introduction")
+    private String introduction;
+
+    @Column(name = "confirm_booking_type")
+    private Integer confirmBookingType;
+
+    @Column(name = "rating_id")
+    private Integer ratingId;
 
     @Column(name = "latitude")
     private Double latitude;
@@ -163,17 +175,69 @@ public class Hotel implements Serializable {
         this.priceTo = priceTo;
     }
 
-    public Integer getRank() {
-        return rank;
+    public Integer getViewCount() {
+        return viewCount;
     }
 
-    public Hotel rank(Integer rank) {
-        this.rank = rank;
+    public Hotel viewCount(Integer viewCount) {
+        this.viewCount = viewCount;
         return this;
     }
 
-    public void setRank(Integer rank) {
-        this.rank = rank;
+    public void setViewCount(Integer viewCount) {
+        this.viewCount = viewCount;
+    }
+
+    public Integer getConvenient() {
+        return convenient;
+    }
+
+    public Hotel convenient(Integer convenient) {
+        this.convenient = convenient;
+        return this;
+    }
+
+    public void setConvenient(Integer convenient) {
+        this.convenient = convenient;
+    }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public Hotel introduction(String introduction) {
+        this.introduction = introduction;
+        return this;
+    }
+
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
+    }
+
+    public Integer getConfirmBookingType() {
+        return confirmBookingType;
+    }
+
+    public Hotel confirmBookingType(Integer confirmBookingType) {
+        this.confirmBookingType = confirmBookingType;
+        return this;
+    }
+
+    public void setConfirmBookingType(Integer confirmBookingType) {
+        this.confirmBookingType = confirmBookingType;
+    }
+
+    public Integer getRatingId() {
+        return ratingId;
+    }
+
+    public Hotel ratingId(Integer ratingId) {
+        this.ratingId = ratingId;
+        return this;
+    }
+
+    public void setRatingId(Integer ratingId) {
+        this.ratingId = ratingId;
     }
 
     public Double getLatitude() {
@@ -337,7 +401,11 @@ public class Hotel implements Serializable {
             ", address='" + getAddress() + "'" +
             ", priceFrom=" + getPriceFrom() +
             ", priceTo=" + getPriceTo() +
-            ", rank=" + getRank() +
+            ", viewCount=" + getViewCount() +
+            ", convenient=" + getConvenient() +
+            ", introduction='" + getIntroduction() + "'" +
+            ", confirmBookingType=" + getConfirmBookingType() +
+            ", ratingId=" + getRatingId() +
             ", latitude=" + getLatitude() +
             ", longitude=" + getLongitude() +
             ", provinceId=" + getProvinceId() +

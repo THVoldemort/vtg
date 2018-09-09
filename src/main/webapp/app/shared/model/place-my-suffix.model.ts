@@ -3,8 +3,7 @@ export interface IPlaceMySuffix {
   name?: string;
   slogan?: string;
   address?: string;
-  rank?: number;
-  commentId?: number;
+  ratingId?: number;
   filePath1?: string;
   filePath2?: string;
   filePath3?: string;

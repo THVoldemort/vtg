@@ -66,8 +66,8 @@ public class ProvinceResourceIntTest {
     private static final String DEFAULT_FILE_PATH_5 = "AAAAAAAAAA";
     private static final String UPDATED_FILE_PATH_5 = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_COMMENT_ID = 1;
-    private static final Integer UPDATED_COMMENT_ID = 2;
+    private static final Integer DEFAULT_RATING_ID = 1;
+    private static final Integer UPDATED_RATING_ID = 2;
 
     @Autowired
     private ProvinceRepository provinceRepository;
@@ -123,7 +123,7 @@ public class ProvinceResourceIntTest {
             .filePath3(DEFAULT_FILE_PATH_3)
             .filePath4(DEFAULT_FILE_PATH_4)
             .filePath5(DEFAULT_FILE_PATH_5)
-            .commentId(DEFAULT_COMMENT_ID);
+            .ratingId(DEFAULT_RATING_ID);
         return province;
     }
 
@@ -156,7 +156,7 @@ public class ProvinceResourceIntTest {
         assertThat(testProvince.getFilePath3()).isEqualTo(DEFAULT_FILE_PATH_3);
         assertThat(testProvince.getFilePath4()).isEqualTo(DEFAULT_FILE_PATH_4);
         assertThat(testProvince.getFilePath5()).isEqualTo(DEFAULT_FILE_PATH_5);
-        assertThat(testProvince.getCommentId()).isEqualTo(DEFAULT_COMMENT_ID);
+        assertThat(testProvince.getRatingId()).isEqualTo(DEFAULT_RATING_ID);
     }
 
     @Test
@@ -198,7 +198,7 @@ public class ProvinceResourceIntTest {
             .andExpect(jsonPath("$.[*].filePath3").value(hasItem(DEFAULT_FILE_PATH_3.toString())))
             .andExpect(jsonPath("$.[*].filePath4").value(hasItem(DEFAULT_FILE_PATH_4.toString())))
             .andExpect(jsonPath("$.[*].filePath5").value(hasItem(DEFAULT_FILE_PATH_5.toString())))
-            .andExpect(jsonPath("$.[*].commentId").value(hasItem(DEFAULT_COMMENT_ID)));
+            .andExpect(jsonPath("$.[*].ratingId").value(hasItem(DEFAULT_RATING_ID)));
     }
     
 
@@ -221,7 +221,7 @@ public class ProvinceResourceIntTest {
             .andExpect(jsonPath("$.filePath3").value(DEFAULT_FILE_PATH_3.toString()))
             .andExpect(jsonPath("$.filePath4").value(DEFAULT_FILE_PATH_4.toString()))
             .andExpect(jsonPath("$.filePath5").value(DEFAULT_FILE_PATH_5.toString()))
-            .andExpect(jsonPath("$.commentId").value(DEFAULT_COMMENT_ID));
+            .andExpect(jsonPath("$.ratingId").value(DEFAULT_RATING_ID));
     }
     @Test
     @Transactional
@@ -252,7 +252,7 @@ public class ProvinceResourceIntTest {
             .filePath3(UPDATED_FILE_PATH_3)
             .filePath4(UPDATED_FILE_PATH_4)
             .filePath5(UPDATED_FILE_PATH_5)
-            .commentId(UPDATED_COMMENT_ID);
+            .ratingId(UPDATED_RATING_ID);
         ProvinceDTO provinceDTO = provinceMapper.toDto(updatedProvince);
 
         restProvinceMockMvc.perform(put("/api/provinces")
@@ -272,7 +272,7 @@ public class ProvinceResourceIntTest {
         assertThat(testProvince.getFilePath3()).isEqualTo(UPDATED_FILE_PATH_3);
         assertThat(testProvince.getFilePath4()).isEqualTo(UPDATED_FILE_PATH_4);
         assertThat(testProvince.getFilePath5()).isEqualTo(UPDATED_FILE_PATH_5);
-        assertThat(testProvince.getCommentId()).isEqualTo(UPDATED_COMMENT_ID);
+        assertThat(testProvince.getRatingId()).isEqualTo(UPDATED_RATING_ID);
     }
 
     @Test

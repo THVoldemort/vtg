@@ -16,9 +16,7 @@ public class PlaceDTO implements Serializable {
 
     private String address;
 
-    private Integer rank;
-
-    private Integer commentId;
+    private Integer ratingId;
 
     private String filePath1;
 
@@ -74,20 +72,12 @@ public class PlaceDTO implements Serializable {
         this.address = address;
     }
 
-    public Integer getRank() {
-        return rank;
+    public Integer getRatingId() {
+        return ratingId;
     }
 
-    public void setRank(Integer rank) {
-        this.rank = rank;
-    }
-
-    public Integer getCommentId() {
-        return commentId;
-    }
-
-    public void setCommentId(Integer commentId) {
-        this.commentId = commentId;
+    public void setRatingId(Integer ratingId) {
+        this.ratingId = ratingId;
     }
 
     public String getFilePath1() {
@@ -206,8 +196,7 @@ public class PlaceDTO implements Serializable {
             ", name='" + getName() + "'" +
             ", slogan='" + getSlogan() + "'" +
             ", address='" + getAddress() + "'" +
-            ", rank=" + getRank() +
-            ", commentId=" + getCommentId() +
+            ", ratingId=" + getRatingId() +
             ", filePath1='" + getFilePath1() + "'" +
             ", filePath2='" + getFilePath2() + "'" +
             ", filePath3='" + getFilePath3() + "'" +

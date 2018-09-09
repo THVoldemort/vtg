@@ -65,11 +65,35 @@ export class HotelMySuffixDetail extends React.Component<IHotelMySuffixDetailPro
             </dt>
             <dd>{hotelEntity.priceTo}</dd>
             <dt>
-              <span id="rank">
-                <Translate contentKey="vtgApp.hotel.rank">Rank</Translate>
+              <span id="viewCount">
+                <Translate contentKey="vtgApp.hotel.viewCount">View Count</Translate>
               </span>
             </dt>
-            <dd>{hotelEntity.rank}</dd>
+            <dd>{hotelEntity.viewCount}</dd>
+            <dt>
+              <span id="convenient">
+                <Translate contentKey="vtgApp.hotel.convenient">Convenient</Translate>
+              </span>
+            </dt>
+            <dd>{hotelEntity.convenient}</dd>
+            <dt>
+              <span id="introduction">
+                <Translate contentKey="vtgApp.hotel.introduction">Introduction</Translate>
+              </span>
+            </dt>
+            <dd>{hotelEntity.introduction}</dd>
+            <dt>
+              <span id="confirmBookingType">
+                <Translate contentKey="vtgApp.hotel.confirmBookingType">Confirm Booking Type</Translate>
+              </span>
+            </dt>
+            <dd>{hotelEntity.confirmBookingType}</dd>
+            <dt>
+              <span id="ratingId">
+                <Translate contentKey="vtgApp.hotel.ratingId">Rating Id</Translate>
+              </span>
+            </dt>
+            <dd>{hotelEntity.ratingId}</dd>
             <dt>
               <span id="latitude">
                 <Translate contentKey="vtgApp.hotel.latitude">Latitude</Translate>

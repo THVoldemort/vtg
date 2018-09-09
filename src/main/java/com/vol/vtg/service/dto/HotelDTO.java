@@ -23,7 +23,15 @@ public class HotelDTO implements Serializable {
 
     private Double priceTo;
 
-    private Integer rank;
+    private Integer viewCount;
+
+    private Integer convenient;
+
+    private String introduction;
+
+    private Integer confirmBookingType;
+
+    private Integer ratingId;
 
     private Double latitude;
 
@@ -101,12 +109,44 @@ public class HotelDTO implements Serializable {
         this.priceTo = priceTo;
     }
 
-    public Integer getRank() {
-        return rank;
+    public Integer getViewCount() {
+        return viewCount;
     }
 
-    public void setRank(Integer rank) {
-        this.rank = rank;
+    public void setViewCount(Integer viewCount) {
+        this.viewCount = viewCount;
+    }
+
+    public Integer getConvenient() {
+        return convenient;
+    }
+
+    public void setConvenient(Integer convenient) {
+        this.convenient = convenient;
+    }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
+    }
+
+    public Integer getConfirmBookingType() {
+        return confirmBookingType;
+    }
+
+    public void setConfirmBookingType(Integer confirmBookingType) {
+        this.confirmBookingType = confirmBookingType;
+    }
+
+    public Integer getRatingId() {
+        return ratingId;
+    }
+
+    public void setRatingId(Integer ratingId) {
+        this.ratingId = ratingId;
     }
 
     public Double getLatitude() {
@@ -220,7 +260,11 @@ public class HotelDTO implements Serializable {
             ", address='" + getAddress() + "'" +
             ", priceFrom=" + getPriceFrom() +
             ", priceTo=" + getPriceTo() +
-            ", rank=" + getRank() +
+            ", viewCount=" + getViewCount() +
+            ", convenient=" + getConvenient() +
+            ", introduction='" + getIntroduction() + "'" +
+            ", confirmBookingType=" + getConfirmBookingType() +
+            ", ratingId=" + getRatingId() +
             ", latitude=" + getLatitude() +
             ", longitude=" + getLongitude() +
             ", provinceId=" + getProvinceId() +
